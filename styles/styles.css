@@ -1,0 +1,173 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #151515;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 45px;
+    width:100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.header .logo {
+    height: 40px;
+    margin: 2.5px;
+    margin-left: 5px;
+}
+
+.header-links {
+    position: absolute;
+    right: 7px;
+}
+
+.header-links a {
+    text-decoration: none;
+    font-size: 18px;
+    margin: 5px;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.header-links a:hover {
+    margin-left: 8px;
+    margin-right: 8px;
+    color: rgb(255, 249, 171);
+}
+
+.sidebar {
+    width: 250px;
+    height: calc(100vh - 45px);
+    box-sizing: border-box;
+    padding: 10px;
+    text-decoration: none;
+    padding-top: 10px;
+}
+
+.rainbow {
+    font-size: 34px;
+    font-weight: bold;
+    animation: rainbow 5s linear infinite;
+}
+
+@keyframes rainbow {
+    0%   { color: red; }
+    14%  { color: orange; }
+    28%  { color: yellow; }
+    42%  { color: green; }
+    57%  { color: blue; }
+    71%  { color: indigo; }
+    85%  { color: violet; }
+    100% { color: red; }
+}
+.content {
+    position: absolute;
+    top: 40px;
+    left: 250px;
+    width: calc(100vw - 250px);
+    height: calc(100vh - 40px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+}
+
+p {
+    width: 80%;
+    text-align: center;
+    text-indent: 25px;
+}
+
+.gamesBrowse {
+    background-color: rgb(255, 255, 82);
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    color: white;
+    margin-top: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.sidebar a:hover {
+    margin-left: 4px;
+    margin-right: 4px;
+    color: rgb(255, 249, 171);
+}
+
+.glass{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    box-sizing: border-box;
+}
+
+.header-logo {
+    margin-top: 20px;
+}
+
+.game-banner {
+    margin-top: 35px;
+    border-radius: 10px;
+    height: 125px;
+    width: calc(100% - 70px);
+    max-width: 600px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.game-banner h1 {
+    margin: 0;
+    color: white;
+    text-shadow:
+    -2px -2px 0 black,
+     2px -2px 0 black,
+    -2px  2px 0 black,
+     2px  2px 0 black;
+     z-index: 2;
+}
+
+.game-banner img{
+    min-height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1
+}
+
+iframe {
+    margin: 20px;
+    width: calc(100% - 70px);
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+}
+
+.game-description {
+    padding: 12px;
+    border-radius: 10px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    width: calc(100% - 70px);
+    max-width: 600px;
+}
