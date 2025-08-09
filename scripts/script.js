@@ -13,6 +13,17 @@ const incognitoWindow = document.createElement('div');
 incognitoWindow.id = 'incognito-window';
 incognitoWindow.classList.add('glass');
 
+incognitoWindow.innerHTML += `
+    <h1>Tab Masker</h1>
+    <button onclick="disguise('https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Google_Drive_icon_%282020%29.svg/1147px-Google_Drive_icon_%282020%29.svg.png', 'Home - Google Drive')">Google Drive</button>
+    <button onclick="disguise('https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Google_Classroom_Logo.svg/1200px-Google_Classroom_Logo.svg.png', 'Google Classroom')">Google Classroom</button>
+`
+
+function disguise(icon, title) {
+    document.head.querySelector('title').innerHTML = title;
+    document.head.querySelector('link[rel="icon"]').href = icon;
+}
+
 // Append the window to the body
 document.body.appendChild(incognitoWindow);
 

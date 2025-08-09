@@ -102,6 +102,16 @@ p {
     margin-top: 10px;
 }
 
+button {
+    background-color: rgb(255, 255, 82);
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    color: white;
+    margin-top: 10px;
+}
+
 .sidebar a {
     text-decoration: none;
     transition: 0.3s ease;
@@ -126,7 +136,8 @@ p {
     color: rgb(255, 249, 171);
 }
 
-.glass{
+.glass,
+button{
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
@@ -242,4 +253,19 @@ iframe {
     right: -300px;
     opacity: 0;
     border:1px solid rgba(255, 255, 255, 0.18);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#incognito-window h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+}
+
+#incognito-window button {
+    font-size: 16px;
+    padding: 7px;
 }
