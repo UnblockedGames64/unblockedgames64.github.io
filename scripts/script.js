@@ -17,7 +17,8 @@ incognitoWindow.innerHTML += `
     <h1>Tab Masker</h1>
     <button onclick="disguise('https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Google_Drive_icon_%282020%29.svg/1147px-Google_Drive_icon_%282020%29.svg.png', 'Home - Google Drive')">Google Drive</button>
     <button onclick="disguise('https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Google_Classroom_Logo.svg/1200px-Google_Classroom_Logo.svg.png', 'Google Classroom')">Google Classroom</button>
-`
+    <button onclick="disguise('https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Google_Docs_logo_%282014-2020%29.svg/1481px-Google_Docs_logo_%282014-2020%29.svg.png', 'Google Docs')">Google Docs</button>
+    `
 
 function disguise(icon, title) {
     document.head.querySelector('title').innerHTML = title;

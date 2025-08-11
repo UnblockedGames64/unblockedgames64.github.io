@@ -268,4 +268,5 @@ iframe {
 #incognito-window button {
     font-size: 16px;
     padding: 7px;
+    cursor: pointer;
 }
