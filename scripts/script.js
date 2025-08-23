@@ -33,3 +33,46 @@ function openIncognitoWindow() {
     incognitoWindow.style.opacity = incognitoWindow.style.opacity === '1' ? '0' : '1';
     incognitoWindow.style.right = incognitoWindow.style.right === '10px' ? '-300px' : '10px';
 }
+
+document.getElementById("popup-ad").innerHTML += `<img class='popup-x' onclick='closePopup()' src='${window.location.origin}/assets/close.svg'>`
+
+const closePopup = () => {
+    document.getElementById("popup-ad").style.display = "none";
+}
+
+const showPopup = () => {
+    document.getElementById("popup-ad").style.display = "flex";
+}
+
+document.addEventListener("visibilitychange", function () {
+  // Check if the tab is now active
+  if (document.visibilityState === "visible") {
+    // 1 in 3 chance
+    if (Math.random() < 1 / 3) {
+      showPopup();
+    }
+  }
+});
+
+closePopup();
+
+function openFullscreen() {
+  let elem = document.getElementById("game-iframe"); // whole page
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { // Safari
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { // IE11
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { // Safari
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { // IE11
+    document.msExitFullscreen();
+  }
+}
