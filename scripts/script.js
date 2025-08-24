@@ -38,10 +38,12 @@ document.getElementById("popup-ad").innerHTML += `<img class='popup-x' onclick='
 
 const closePopup = () => {
     document.getElementById("popup-ad").style.display = "none";
+    document.body.style.overflow = "unset";
 }
 
 const showPopup = () => {
     document.getElementById("popup-ad").style.display = "flex";
+    document.body.style.overflow = "hidden";
 }
 
 document.addEventListener("visibilitychange", function () {
@@ -57,7 +59,12 @@ document.addEventListener("visibilitychange", function () {
 closePopup();
 
 function openFullscreen() {
-  let elem = document.getElementById("game-iframe"); // whole page
+  let elem = document.body; // whole page
+  document.body.classList.add("fullscreen");
+  document.getElementsByClassName("gamebar")[0].classList.remove("glass");
+  document.getElementById("fullscreen-btn").src = "../assets/icons/fullscreen_exit.svg"
+  document.getElementById("fullscreen-btn").onclick = closeFullscreen
+
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
   } else if (elem.webkitRequestFullscreen) { // Safari
@@ -65,9 +72,16 @@ function openFullscreen() {
   } else if (elem.msRequestFullscreen) { // IE11
     elem.msRequestFullscreen();
   }
+
+  showPopup();
 }
 
 function closeFullscreen() {
+  document.body.classList.remove("fullscreen")
+  document.getElementsByClassName("gamebar")[0].classList.add("glass")
+  document.getElementById("fullscreen-btn").src = "../assets/icons/fullscreen.svg"
+  document.getElementById("fullscreen-btn").onclick = openFullscreen
+
   if (document.exitFullscreen) {
     document.exitFullscreen();
   } else if (document.webkitExitFullscreen) { // Safari

@@ -9,6 +9,17 @@
     <script src="../scripts/homeinject.js" defer></script>
     <script src="../scripts/injectgames.js" defer></script>
     <script src="../scripts/script.js" defer></script>
+    <script src="../scripts/game-analytics.js" defer></script>
+    <script defer>
+        // Example: Run on page load
+        window.addEventListener("DOMContentLoaded", async () => {
+        rowData = await fetchRow("Sheet1", getIdByName(document.getElementsByClassName("gamebar")[0].firstChild.innerHTML) + 1); // fetch row 2 of "Sheet1"
+        document.getElementById("stats").innerHTML = `${rowData[0] + 1} Views<br>${rowData[1]} Likes`
+
+        // Example: increment cell A2
+        await incrementCell("Sheet1", "A" + String(getIdByName(document.getElementsByClassName("gamebar")[0].firstChild.innerHTML) + 1));
+        });
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Explore a vast collection of free unblocked games 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
     <meta name="robots" content="index, follow">
@@ -40,7 +51,6 @@
             <a class="homelink" href="">Home</a>
             <a href="../games.html">Games</a>
             <a href="../about.html">About</a>
-            <a href="../contact.html">Contact</a>
         </div>
     </div>
     <div class="website-body">    
@@ -77,9 +87,11 @@
                         (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
                 </div>
-                <iframe id="game-iframe" src="../games-src/minecraft.html"></iframe>
-                <div class="gamebar"><button onclick="openFullscreen()">Clanka</button></div>
-                <div class="ad vertical">
+                <div class="iframe">
+                    <iframe id="game-iframe" src="../games-src/minecraft.html"></iframe>
+                    <div class="gamebar glass"><div>Minecraft</div><div id="stats"></div><img onclick="likeGame();" id="like-btn" src="../assets/icons/heart_plus.svg"><img onclick="openFullscreen();" id="fullscreen-btn" src="../assets/icons/fullscreen.svg"></div>
+                </div>
+                <div class="ad vertical" id="fullscreenad">
                     <ins class="adsbygoogle"
                         style="display:block"
                         data-ad-client="ca-pub-5698886275599668"
@@ -102,6 +114,15 @@
                     </script>
                 </div>
             </div>
+            
+            <p class="game-description glass">
+                Minecraft Unblocked lets you dive into the ultimate sandbox adventure, free from restrictions. Whether you're crafting towering castles or surviving the night against mobs, this version of Minecraft is perfect for playing at school or work—no downloads, no logins, just pure creativity. Build, mine, and explore endless worlds right in your browser. If you're looking for a fun and free way to enjoy the game, Minecraft Unblocked is the best way to play online. Start building today—anytime, anywhere!
+            </p>
+
+            <div class="game-suggest glass">
+                Suggested for you
+                <div id="suggested" class="game-suggest-carousel"></div>
+            </div>
 
             <div class="ad horizontal desktop">
                 <ins class="adsbygoogle"
@@ -114,10 +135,6 @@
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
-            
-            <p class="game-description glass">
-                Minecraft Unblocked lets you dive into the ultimate sandbox adventure, free from restrictions. Whether you're crafting towering castles or surviving the night against mobs, this version of Minecraft is perfect for playing at school or work—no downloads, no logins, just pure creativity. Build, mine, and explore endless worlds right in your browser. If you're looking for a fun and free way to enjoy the game, Minecraft Unblocked is the best way to play online. Start building today—anytime, anywhere!
-            </p>
 
             <ins class="adsbygoogle"
                 style="display:block"
@@ -127,7 +144,10 @@
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
+            <div class="footer"><a href="privacypolicy.html">Privacy Policy</a><a href="termsandconditions.html">Terms & Conditions</a><a href="contact.html">Contact Us</a></div>
+
         </div>
+
     </div>
     <div id="popup-ad">
         <!-- popup-square -->
