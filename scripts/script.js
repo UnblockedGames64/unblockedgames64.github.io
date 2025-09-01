@@ -34,7 +34,12 @@ function openIncognitoWindow() {
     incognitoWindow.style.right = incognitoWindow.style.right === '10px' ? '-300px' : '10px';
 }
 
-document.getElementById("popup-ad").innerHTML += `<img class='popup-x' onclick='closePopup()' src='${window.location.origin}/assets/close.svg'>`
+
+document.getElementById("popup-ad").style.display = "none";
+
+//uncomment once adsense verified
+
+/* document.getElementById("popup-ad").innerHTML += `<img class='popup-x' onclick='closePopup()' src='${window.location.origin}/assets/close.svg'>`
 
 const closePopup = () => {
     document.getElementById("popup-ad").style.display = "none";
@@ -56,7 +61,7 @@ document.addEventListener("visibilitychange", function () {
   }
 });
 
-closePopup();
+closePopup(); */
 
 function openFullscreen() {
   let elem = document.body; // whole page
@@ -90,3 +95,12 @@ function closeFullscreen() {
     document.msExitFullscreen();
   }
 }
+
+document.addEventListener("fullscreenchange", function(event) {
+    if (!document.fullscreenElement) { // No element is fullscreen now
+      document.body.classList.remove("fullscreen")
+      document.getElementsByClassName("gamebar")[0].classList.add("glass")
+      document.getElementById("fullscreen-btn").src = "../assets/icons/fullscreen.svg"
+      document.getElementById("fullscreen-btn").onclick = openFullscreen
+    }
+});

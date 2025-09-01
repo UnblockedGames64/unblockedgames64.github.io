@@ -30,6 +30,7 @@ body {
     height: 40px;
     margin: 2.5px;
     margin-left: 5px;
+    cursor: pointer;
 }
 
 .header-links {
@@ -136,6 +137,8 @@ button {
 }
 .sidebar a img {
     height: 35px;
+    width: 35px;
+    overflow: hidden;
     border-radius: 5px;
 }
 
@@ -388,6 +391,20 @@ h2 {
     border:1px solid rgba(255, 255, 255, 0.18);
     width: calc(100% - 40px);
     max-width: 600px;
+    margin: 15px;
+    text-align: left;
+    font-size: 14px;
+}
+.game-description h1 {
+    font-size: 22px;
+}
+
+.game-description * {
+    text-align: left !important;
+    width: 99% !important;
+}
+.game-description h2 {
+    font-size: 18px;
 }
 
 .cool-background {
