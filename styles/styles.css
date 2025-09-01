@@ -397,6 +397,7 @@ h2 {
 }
 .game-description h1 {
     font-size: 22px;
+    margin-top: 0;
 }
 
 .game-description * {
