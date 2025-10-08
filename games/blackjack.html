@@ -1,205 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets/favicon.png">
-    <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="stylesheet" href="/styles/responsive.css">
-    <script src="/scripts/homeinject.js" defer></script>
-    <script src="/scripts/injectgames.js" defer></script>
-    <script src="/scripts/script.js" defer></script>
-    <script src="/scripts/game-analytics.js" defer></script>
-    <script defer>
-        // Example: Run on page load
-        window.addEventListener("DOMContentLoaded", async () => {
-        rowData = await fetchRow("Sheet1", getIdByName(document.getElementsByClassName("gamebar")[0].firstChild.innerHTML) + 1); // fetch row 2 of "Sheet1"
-        document.getElementById("stats").innerHTML = `${rowData[0] + 1} Views<br>${rowData[1] === "" ? "0" : rowData[1]} Likes`
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../assets/favicon.png">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
+  <script src="../scripts/homeinject.js" defer></script>
+  <script src="../scripts/injectgames.js" defer></script>
+  <script src="../scripts/script.js" defer></script>
+  <script src="../scripts/game-analytics.js" defer></script>
+  <script defer>
+      // Example: Run on page load
+      window.addEventListener("DOMContentLoaded", async () => {
+      rowData = await fetchRow("Sheet1", getIdByName("Blackjack") + 1); // fetch row 2 of "Sheet1"
+      document.getElementById("stats").innerHTML = `${rowData[0] + 1} Views<br>${rowData[1] === "" ? "0" : rowData[1]} Likes`
 
+      // Example: increment cell A2
+      await incrementCell("Sheet1", "A" + String(getIdByName(document.getElementsByClassName("gamebar")[0].firstChild.innerHTML) + 1));
+      });
+  </script>
+  <meta name="description" content="Explore unblocked games Blackjack 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
+  <meta name="robots" content="index, follow">
 
-        // Example: increment cell A2
-        await incrementCell("Sheet1", "A" + String(getIdByName(document.getElementsByClassName("gamebar")[0].firstChild.innerHTML) + 1));
-        });
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Explore unblocked games Blackjack 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Blackjack Unblocked - Unblocked Games 64">
-    <meta property="og:description" content="Explore unblocked games Blackjack 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
-    <meta property="og:image" content="/assets/logo.png">
-    <meta property="og:url" content="https://unblockedgames64.github.io/games/blackjack.html">
-    <meta property="og:type" content="website">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Blackjack Unblocked - Unblocked Games 64</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5698886275599668"
-     crossorigin="anonymous" defer></script>
+  <meta property="og:title" content="Blackjack Unblocked - Unblocked Games 64">
+  <meta property="og:description" content="Explore unblocked games Blackjack 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
+  <meta property="og:image" content="../assets/logo.png">
+  <meta property="og:url" content="https://unblockedgames64.github.io/games/blackjack.html">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Blackjack Unblocked - Unblocked Games 64</title>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Blackjack",
+    "url": "https://unblockedgames64.github.io/games/blackjack.html",
+    "image": "/assets/banners/blackjack.png",
+    "description": "Explore unblocked games Blackjack 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!",
+    "genre": "Strategy",
+    "operatingSystem": "Web browser",
+    "applicationCategory": "Game"
+  }
+  </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VYJ5H21PCG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-
-  gtag('config', 'G-VYJ5H21PCG');
-</script>
-
 
 <body>
-    <div class="header glass">
-        <img src="/assets/logo.png" alt="" class="logo">
-        <div class="header-links">
-            <a class="homelink" href="">Home</a>
-            <a href="/games">Games</a>
-            <a href="/about">About</a>
-        </div>
+  <div class="header glass">
+    <img src="../assets/logo.png" alt="Unblocked Games 64 Logo" class="logo">
+    <div class="header-links">
+      <a class="homelink" href="../index.html">Home</a>
+      <a href="../games.html">Games</a>
+      <a href="../about.html">About</a>
     </div>
-    <div class="website-body">    
-        <div id="games-sidebar" class="sidebar glass">
+  </div>
 
+  <div class="website-body">    
+    <div id="games-sidebar" class="sidebar glass"></div>
+
+    <div class="content">
+      <!-- Game Banner -->
+      <div class="game-banner">
+        <img src="/assets/banners/blackjack.png" alt="Blackjack banner">
+        <h1 class="game-header">Blackjack Unblocked</h1>
+      </div>
+
+      <p style="font-style: italic; margin: 10px; width: 95%;">Blackjack is free to play! Today, anytime, anywhere.</p>
+
+      <!-- Game Embed -->
+      <div class="game">
+        <div class="iframe">
+          <iframe id="game-iframe" src="\games-src\blackjack-master\blackjack.html"></iframe>
+          <div class="gamebar glass"><div>Blackjack</div>
+            <div id="stats"></div>
+            <img onclick="likeGame();" id="like-btn" src="../assets/icons/heart_plus.svg" alt="Like this game">
+            <img onclick="openFullscreen();" id="fullscreen-btn" src="../assets/icons/fullscreen.svg" alt="Play fullscreen">
+          </div>
         </div>
+      </div>
 
+      <div class="game-description glass">
+        <h1>🃏 Blackjack Unblocked – Play Online Free</h1>
 
-        <div class="content">
-            <div class="game-banner">
-                <img src="https://www.mobilityware.com/wp-content/uploads/2022/05/76608c_cf73479470cc44e18455ce9059982132_mv2.webp">
-                <h1 class="game-header">Blackjack Unblocked</h1>
-            </div>
+<p><strong>Blackjack Unblocked</strong> lets you experience the thrill of the casino classic right in your browser — no downloads, no restrictions, and no need to gamble with real money. Whether you’re at school, work, or just relaxing at home, you can test your luck and skill as you try to hit that perfect 21. It’s a mix of strategy, probability, and instinct, and the unblocked version makes it easy for anyone to play anywhere, anytime.</p>
 
+<p>Blackjack, also known as <em>21</em>, is one of the most popular card games in the world. Its appeal lies in its balance between luck and decision-making — the rules are simple, but every choice matters. You’re not just playing against the deck; you’re facing the dealer in a tense duel of calculation and nerve. Will you hit, stand, split, or double down? Every hand brings a new challenge.</p>
 
-            <div class="game">
-                <div class="ad vertical">    <!-- sigma vertical -->
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-5698886275599668"
-                        data-ad-slot="2405088247"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-                <div class="ad horizontal">
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-5698886275599668"
-                        data-ad-slot="4365532012"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-                <div class="iframe">
-                    <iframe id="game-iframe" src="../games-src/blackjack-master/blackjack.html"></iframe>
-                    <div class="gamebar glass"><div>Blackjack</div><div id="stats"></div><img onclick="likeGame();" id="like-btn" src="/assets/icons/heart_plus.svg"><img onclick="openFullscreen();" id="fullscreen-btn" src="/assets/icons/fullscreen.svg"></div>
-                </div>
-                <div class="ad vertical" id="fullscreenad">
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-5698886275599668"
-                        data-ad-slot="2405088247"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-                <div class="ad horizontal">
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-5698886275599668"
-                        data-ad-slot="4365532012"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-            </div>
-           
-            <div class="game-description glass">
-                <h1>🃏 Blackjack Unblocked – Play Online Free</h1>
+<h2>🎮 How to Play Blackjack</h2>
+<p>The goal in Blackjack is simple: beat the dealer’s hand without going over 21. Both you and the dealer start with two cards. Each card has a value — numbered cards are worth their number, face cards (Jack, Queen, King) are worth 10, and Aces can count as either 1 or 11, depending on what helps your hand the most.</p>
 
-<p><strong>Blackjack Unblocked</strong> is the classic casino card game brought straight to your browser. Test your luck and strategy as you compete against the dealer to reach 21 without going over. Perfect for quick, fun gameplay sessions anytime, anywhere.</p>
-
-<h2>🎮 How to Play</h2>
 <ul>
-  <li>Each player is dealt two cards, and the dealer shows one face-up card.</li>
-  <li>Choose to "Hit" for another card or "Stand" to keep your total.</li>
-  <li>Try to get as close to 21 as possible without busting.</li>
-  <li>If your hand beats the dealer’s without going over, you win!</li>
+  <li><strong>Hit:</strong> Take another card to increase your total.</li>
+  <li><strong>Stand:</strong> Keep your current hand and end your turn.</li>
+  <li><strong>Double Down:</strong> Double your bet and take one final card.</li>
+  <li><strong>Split:</strong> If your first two cards are a pair, split them into two separate hands.</li>
+  <li><strong>Blackjack:</strong> When you’re dealt an Ace and a 10-value card, you automatically win (unless the dealer also has Blackjack).</li>
 </ul>
 
-<h2>⭐ Features</h2>
+<p>After all players finish their turns, the dealer reveals their face-down card and must keep hitting until reaching 17 or higher. Whoever gets closest to 21 without busting wins. It’s fast, exciting, and unpredictable — no two rounds are ever the same.</p>
+
+<h2>🧠 Strategy and Tips for Beginners</h2>
+<p>While Blackjack involves luck, skillful play can make a huge difference. Here are some key tips to increase your odds of winning:</p>
+
 <ul>
-  <li>Classic Blackjack rules with fast-paced gameplay.</li>
-  <li>Practice your strategy without risking real money.</li>
-  <li>Instant browser play – no downloads or accounts required.</li>
-  <li>100% free and school-safe in this unblocked version.</li>
+  <li><strong>Always assume the dealer’s hidden card is a 10.</strong> This simple rule helps you make smarter decisions.</li>
+  <li><strong>Hit when your total is 11 or lower.</strong> There’s no risk of busting, and you might draw a high card.</li>
+  <li><strong>Stand on 17 or higher.</strong> At that point, the odds of busting are too high.</li>
+  <li><strong>Split pairs of Aces and 8s.</strong> Two Aces give you a chance at two strong hands, and 8s remove a weak total of 16.</li>
+  <li><strong>Never split 10s.</strong> A total of 20 is one of the best positions you can have.</li>
+  <li><strong>Use basic strategy charts.</strong> Many players memorize charts that tell you the statistically best move for every possible hand.</li>
 </ul>
 
-<h2>🚀 Why Play Blackjack Unblocked?</h2>
-<p>Blackjack is the ultimate mix of luck and skill, making it one of the most popular card games in the world. With this <strong>unblocked version</strong>, you can enjoy the thrill of the casino at school, work, or home – no restrictions, no stress. Sharpen your strategy and see if you can beat the dealer!</p>
+<p>Mastering Blackjack is about balance — taking calculated risks while knowing when to hold back. The more you play, the better you’ll get at reading the table and predicting outcomes.</p>
 
-<p><strong>👉 Play Blackjack Unblocked now and put your card skills to the test!</strong></p>
+<h2>💡 Why It’s So Popular</h2>
+<p>Blackjack stands out because it’s easy to learn but endlessly engaging. Unlike many casino games, it gives players a real chance to influence the outcome. Every hand feels like a puzzle — you’re constantly weighing risk versus reward. It’s not just about luck; it’s about psychology, math, and timing.</p>
 
-            </div>
+<p>The unblocked version removes all the casino pressure, letting you focus on fun and practice. Whether you’re learning the ropes or refining your strategy, it’s a great way to experience the game without spending a dime.</p>
 
+<h2>🔥 Advanced Techniques</h2>
+<p>Once you’ve mastered the basics, try out some advanced techniques used by seasoned players:</p>
 
-            <div class="game-suggest glass">
-                Suggested for you
-                <div id="suggested" class="game-suggest-carousel"></div>
-            </div>
+<ul>
+  <li><strong>Card Counting (for practice only):</strong> Skilled players keep track of which cards have been played to predict future outcomes. While not allowed in real casinos, it’s fun to learn the concept in unblocked play.</li>
+  <li><strong>Managing Your Bankroll:</strong> Set a limit for how many virtual chips you’ll use and stick to it — discipline is key in Blackjack.</li>
+  <li><strong>Watch the Dealer:</strong> Keep an eye on how often the dealer busts or hits on soft 17. It can influence your decisions.</li>
+  <li><strong>Practice Patience:</strong> Blackjack rewards those who think, not those who rush. Every hand is a chance to learn.</li>
+</ul>
 
+<p>Learning advanced Blackjack isn’t about luck — it’s about observation and memory. Over time, you’ll develop instincts that separate amateurs from experts.</p>
 
-            <div class="ad horizontal desktop">
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-5698886275599668"
-                    data-ad-slot="2540410499"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
+<h2>📱 Play Anywhere, Anytime</h2>
+<p><strong>Blackjack Unblocked</strong> is perfect for quick games on the go. You can play in your browser without installing anything, and it works on both desktop and mobile devices. Since it’s unblocked, you can enjoy it even on restricted networks — whether you’re killing time at school, taking a break at work, or just unwinding at home.</p>
 
+<h2>❓ Frequently Asked Questions</h2>
+<ul>
+  <li><strong>Is Blackjack Unblocked free?</strong> Yes! It’s 100% free to play, with no downloads or sign-ups required.</li>
+  <li><strong>Can I play offline?</strong> Most versions let you keep playing after the page loads — perfect for travel or low-internet environments.</li>
+  <li><strong>Does it use real money?</strong> No. The unblocked version is purely for fun and learning, not gambling.</li>
+  <li><strong>Is it good for beginners?</strong> Absolutely. It’s one of the best ways to learn the game risk-free.</li>
+  <li><strong>Can I play with friends?</strong> Some versions include local or online multiplayer modes, so you can challenge your friends directly.</li>
+</ul>
 
-            <div class="ad matrix">
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-format="autorelaxed"
-                    data-ad-client="ca-pub-5698886275599668"
-                    data-ad-slot="4835401344"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-            <div class="footer"><a href="/privacypolicy">Privacy Policy</a><a href="/termsandconditions">Terms & Conditions</a><a href="/contact">Contact Us</a></div>
+<h2>🏆 Why Play Blackjack Unblocked?</h2>
+<p>Because it’s timeless, exciting, and incredibly rewarding. Blackjack isn’t just a game of chance — it’s a mental workout that sharpens your decision-making skills. With <strong>Blackjack Unblocked</strong>, you can experience all the tension and fun of a real casino table, without the stakes. It’s the perfect balance of luck and logic, and every hand tells a new story.</p>
 
+<p>So whether you’re a first-time player learning what “hit” and “stand” mean, or a veteran chasing that elusive perfect streak, this game offers endless replay value and satisfaction. Practice, improve, and enjoy the thrill of the world’s most iconic card game — no money, no limits, just fun.</p>
 
-        </div>
+<p><strong>👉 Try Blackjack Unblocked now and see if you have what it takes to hit 21 — luck favors the bold!</strong></p>
 
 
+        <h2>🖼 Screenshots</h2>
+        <img src="/assets/screenshots/blackjack1.png" alt="Blackjack Level 1">
+        <img src="/assets/screenshots/blackjack2.png" alt="Blackjack advanced level">
+
+        <h2>▶ Beginner Tutorial Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/eyoh-Ku9TCI?si=4HV9TCWqRgo8kcmy" title="Blackjack Gameplay" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <!-- Suggested Games -->
+      <div class="game-suggest glass">
+        Suggested for you
+        <div id="suggested" class="game-suggest-carousel"></div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <a href="../privacypolicy.html">Privacy Policy</a>
+        <a href="../termsandconditions.html">Terms & Conditions</a>
+        <a href="../contact.html">Contact Us</a>
+      </div>
     </div>
-    <div id="popup-ad">
-        <!-- popup-square -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-5698886275599668"
-            data-ad-slot="9969567708"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-    <div class="cool-background"></div>
+  </div>
 
-
+  <div class="cool-background"></div>
 </body>
 </html>

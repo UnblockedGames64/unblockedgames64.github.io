@@ -1,205 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets/favicon.png">
-    <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="stylesheet" href="/styles/responsive.css">
-    <script src="/scripts/homeinject.js" defer></script>
-    <script src="/scripts/injectgames.js" defer></script>
-    <script src="/scripts/script.js" defer></script>
-    <script src="/scripts/game-analytics.js" defer></script>
-    <script defer>
-        // Example: Run on page load
-        window.addEventListener("DOMContentLoaded", async () => {
-        rowData = await fetchRow("Sheet1", getIdByName(document.getElementsByClassName("gamebar")[0].firstChild.innerHTML) + 1); // fetch row 2 of "Sheet1"
-        document.getElementById("stats").innerHTML = `${rowData[0] + 1} Views<br>${rowData[1] === "" ? "0" : rowData[1]} Likes`
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../assets/favicon.png">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
+  <script src="../scripts/homeinject.js" defer></script>
+  <script src="../scripts/injectgames.js" defer></script>
+  <script src="../scripts/script.js" defer></script>
+  <script src="../scripts/game-analytics.js" defer></script>
+  <script defer>
+      // Example: Run on page load
+      window.addEventListener("DOMContentLoaded", async () => {
+      rowData = await fetchRow("Sheet1", getIdByName("Tetris") + 1); // fetch row 2 of "Sheet1"
+      document.getElementById("stats").innerHTML = `${rowData[0] + 1} Views<br>${rowData[1] === "" ? "0" : rowData[1]} Likes`
 
+      // Example: increment cell A2
+      await incrementCell("Sheet1", "A" + String(getIdByName(document.getElementsByClassName("gamebar")[0].firstChild.innerHTML) + 1));
+      });
+  </script>
+  <meta name="description" content="Explore unblocked games Tetris 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
+  <meta name="robots" content="index, follow">
 
-        // Example: increment cell A2
-        await incrementCell("Sheet1", "A" + String(getIdByName(document.getElementsByClassName("gamebar")[0].firstChild.innerHTML) + 1));
-        });
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Explore unblocked games Tetris 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Tetris Unblocked - Unblocked Games 64">
-    <meta property="og:description" content="Explore unblocked games Tetris 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
-    <meta property="og:image" content="/assets/logo.png">
-    <meta property="og:url" content="https://unblockedgames64.github.io/games/tetris.html">
-    <meta property="og:type" content="website">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Tetris Unblocked - Unblocked Games 64</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5698886275599668"
-     crossorigin="anonymous" defer></script>
+  <meta property="og:title" content="Tetris Unblocked - Unblocked Games 64">
+  <meta property="og:description" content="Explore unblocked games Tetris 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
+  <meta property="og:image" content="../assets/logo.png">
+  <meta property="og:url" content="https://unblockedgames64.github.io/games/tetris.html">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Tetris Unblocked - Unblocked Games 64</title>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Tetris",
+    "url": "https://unblockedgames64.github.io/games/tetris.html",
+    "image": "/assets/banners/tetris.png",
+    "description": "Explore unblocked games Tetris 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!",
+    "genre": "Infinite",
+    "operatingSystem": "Web browser",
+    "applicationCategory": "Game"
+  }
+  </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VYJ5H21PCG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-
-  gtag('config', 'G-VYJ5H21PCG');
-</script>
-
 
 <body>
-    <div class="header glass">
-        <img src="/assets/logo.png" alt="" class="logo">
-        <div class="header-links">
-            <a class="homelink" href="">Home</a>
-            <a href="/games">Games</a>
-            <a href="/about">About</a>
-        </div>
+  <div class="header glass">
+    <img src="../assets/logo.png" alt="Unblocked Games 64 Logo" class="logo">
+    <div class="header-links">
+      <a class="homelink" href="../index.html">Home</a>
+      <a href="../games.html">Games</a>
+      <a href="../about.html">About</a>
     </div>
-    <div class="website-body">    
-        <div id="games-sidebar" class="sidebar glass">
+  </div>
 
+  <div class="website-body">    
+    <div id="games-sidebar" class="sidebar glass"></div>
+
+    <div class="content">
+      <!-- Game Banner -->
+      <div class="game-banner">
+        <img src="/assets/banners/tetris.png" alt="Tetris banner">
+        <h1 class="game-header">Tetris Unblocked</h1>
+      </div>
+
+      <p style="font-style: italic; margin: 10px; width: 95%;">Tetris is free to play! Today, anytime, anywhere.</p>
+
+      <!-- Game Embed -->
+      <div class="game">
+        <div class="iframe">
+          <iframe id="game-iframe" src="\games-src\tetris\tetris.html"></iframe>
+          <div class="gamebar glass"><div>Tetris</div>
+            <div id="stats"></div>
+            <img onclick="likeGame();" id="like-btn" src="../assets/icons/heart_plus.svg" alt="Like this game">
+            <img onclick="openFullscreen();" id="fullscreen-btn" src="../assets/icons/fullscreen.svg" alt="Play fullscreen">
+          </div>
         </div>
+      </div>
 
+      <div class="game-description glass">
+        <h1>🟦 Tetris Unblocked – Play Online Free</h1>
 
-        <div class="content">
-            <div class="game-banner">
-                <img src="https://images.ctfassets.net/u4t0f0gy4xt5/3kmer2KOGBKyLNuqnncZQA/7a7f2befc358116e633ee017277660d8/Tetris_banner.jpg?w=1200&h=630&q=50&fit=fill&f=top">
-                <h1 class="game-header">Tetris Unblocked</h1>
-            </div>
+<p><strong>Tetris Unblocked</strong> is the timeless puzzle game that has captivated players for decades. Its deceptively simple mechanics — rotating and dropping falling blocks to complete horizontal lines — can turn into an intense test of strategy, speed, and planning. The unblocked version brings this classic directly to your browser, so you can enjoy endless hours of block-stacking fun anywhere, without downloads or restrictions.</p>
 
+<p>Originally created by Alexey Pajitnov in 1984, <em>Tetris</em> quickly became a global sensation, and its addictive gameplay remains unmatched. Every falling tetromino challenges you to think ahead, plan rotations, and position blocks perfectly to avoid running out of space. With each level, the speed increases, testing both your reflexes and your ability to think under pressure.</p>
 
-            <div class="game">
-                <div class="ad vertical">    <!-- sigma vertical -->
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-5698886275599668"
-                        data-ad-slot="2405088247"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-                <div class="ad horizontal">
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-5698886275599668"
-                        data-ad-slot="4365532012"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-                <div class="iframe">
-                    <iframe id="game-iframe" src="../games-src/tetris/tetris.html"></iframe>
-                    <div class="gamebar glass"><div>Tetris</div><div id="stats"></div><img onclick="likeGame();" id="like-btn" src="/assets/icons/heart_plus.svg"><img onclick="openFullscreen();" id="fullscreen-btn" src="/assets/icons/fullscreen.svg"></div>
-                </div>
-                <div class="ad vertical" id="fullscreenad">
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-5698886275599668"
-                        data-ad-slot="2405088247"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-                <div class="ad horizontal">
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-5698886275599668"
-                        data-ad-slot="4365532012"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-            </div>
-           
-            <div class="game-description glass">
-                <h1>🧩 Tetris Unblocked – Play Online Free</h1>
+<h2>🎮 How to Play Tetris</h2>
+<p>The rules of Tetris are straightforward, making it accessible to players of all ages:</p>
 
-<p><strong>Tetris Unblocked</strong> is the timeless puzzle game where you rotate and stack falling blocks to clear lines and keep the board from filling up. Simple to learn but endlessly addictive, this classic challenge has entertained players for decades.</p>
-
-<h2>🎮 How to Play</h2>
 <ul>
-  <li>Use the arrow keys to move and rotate falling blocks.</li>
-  <li>Complete horizontal lines to clear them from the board.</li>
-  <li>Plan ahead to keep your stack low and avoid reaching the top.</li>
-  <li>Survive as long as possible while aiming for a high score.</li>
+  <li><strong>Arrow Keys:</strong> Move tetrominoes left or right to fit them into place.</li>
+  <li><strong>Up Arrow:</strong> Rotate the tetromino to fit it correctly.</li>
+  <li><strong>Down Arrow:</strong> Soft drop the piece faster for quicker placement.</li>
+  <li><strong>Spacebar:</strong> Hard drop the tetromino instantly to the bottom.</li>
+  <li><strong>Goal:</strong> Complete horizontal lines to clear them and prevent the stack from reaching the top.</li>
 </ul>
 
-<h2>⭐ Features</h2>
+<p>The key to success is planning ahead — think about where upcoming tetrominoes will fit and try to create complete lines with minimal gaps. Clearing multiple lines at once earns more points and creates space for longer survival.</p>
+
+<h2>🎯 Tips for Beginners</h2>
+<p>If you’re new to Tetris, here are some strategies to help you get started:</p>
+
 <ul>
-  <li>Classic puzzle gameplay loved worldwide.</li>
-  <li>Easy controls that anyone can pick up quickly.</li>
-  <li>Endless replay value with increasing difficulty.</li>
-  <li>100% free and school-safe in this unblocked version.</li>
+  <li>Keep the stack as flat as possible — avoid creating tall peaks that are hard to fill.</li>
+  <li>Focus on creating full lines rather than just placing pieces randomly.</li>
+  <li>Use rotations wisely to fit pieces into tight spaces.</li>
+  <li>Don’t panic as the speed increases — stay calm and plan your moves quickly.</li>
+  <li>Save long pieces (the I-shaped tetromino) for clearing multiple lines at once.</li>
+</ul>
+
+<h2>🔥 Advanced Strategies</h2>
+<p>Once you’re comfortable with the basics, you can try more advanced techniques to maximize your score and survive longer:</p>
+
+<ul>
+  <li><strong>T-Spin:</strong> Rotate T-shaped pieces into tight spots for bonus points.</li>
+  <li><strong>Back-to-Back Clears:</strong> Clear multiple line combos consecutively for higher scores.</li>
+  <li><strong>Stack Management:</strong> Keep one column slightly lower to prepare for I-shaped pieces.</li>
+  <li><strong>Speed Control:</strong> Adjust your drop speed to balance speed and accuracy.</li>
+</ul>
+
+<p>Advanced players focus on efficiency and foresight, predicting upcoming tetrominoes and planning placements several moves ahead. This skill is what separates casual players from Tetris masters.</p>
+
+<h2>📜 Game Background & Popularity</h2>
+<p>Tetris is not just a game; it’s a cultural icon. Its simple yet challenging mechanics have made it a favorite for generations of players. The game’s design encourages pattern recognition, quick thinking, and spatial awareness, making it both fun and mentally stimulating. Tetris has appeared on virtually every gaming platform imaginable and remains relevant because of its endless replay value and addictive gameplay.</p>
+
+<p>The unblocked version allows players in schools, offices, or other restricted networks to enjoy Tetris anytime. It preserves the classic experience while making it more accessible to everyone.</p>
+
+<h2>❓ Frequently Asked Questions</h2>
+<ul>
+  <li><strong>Can I play on mobile?</strong> Yes, the unblocked version works smoothly on smartphones and tablets.</li>
+  <li><strong>Do I need an account?</strong> No, you can play instantly without signing up.</li>
+  <li><strong>Is it good for beginners?</strong> Absolutely. The game starts slow and gradually increases in speed as you improve.</li>
+  <li><strong>Are there different game modes?</strong> Some versions include endless mode, time attack, and level progression for variety.</li>
+  <li><strong>Can I track my high score?</strong> Many unblocked versions allow you to see and aim to beat your personal best score.</li>
 </ul>
 
 <h2>🚀 Why Play Tetris Unblocked?</h2>
-<p>Tetris is the ultimate puzzle experience, perfect for sharpening your mind, improving reaction time, and passing the time with fun, challenging gameplay. With this <strong>unblocked version</strong>, you can enjoy Tetris at school, work, or anywhere without restrictions. Test your skills and see how many lines you can clear!</p>
+<p>Tetris remains one of the most compelling and addictive puzzle games of all time. Its perfect blend of simplicity and challenge makes it endlessly replayable. The unblocked version lets you enjoy the timeless gameplay anywhere, without downloads or restrictions. Each piece placement tests your planning, speed, and strategy, making every session a unique challenge. Whether you’re looking for a quick mental exercise or a long, immersive session, <strong>Tetris Unblocked</strong> delivers hours of fun.</p>
 
-<p><strong>👉 Play Tetris Unblocked now and enjoy the most iconic puzzle game ever created!</strong></p>
-
-            </div>
+<p><strong>�� Play Tetris Unblocked today and see how long you can survive — stack wisely, clear lines, and aim for the top score!</strong></p>
 
 
-            <div class="game-suggest glass">
-                Suggested for you
-                <div id="suggested" class="game-suggest-carousel"></div>
-            </div>
+        <h2>🖼 Screenshots</h2>
+        <img src="/assets/screenshots/tetris1.png" alt="Tetris Level 1">
+        <img src="/assets/screenshots/tetris2.png" alt="Tetris advanced level">
 
+        <h2>▶ Beginner Tutorial Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/lCPeBiRe8GU?si=8GFAspEizFr_rah4" title="Tetris Gameplay" frameborder="0" allowfullscreen></iframe>
+      </div>
 
-            <div class="ad horizontal desktop">
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-5698886275599668"
-                    data-ad-slot="2540410499"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
+      <!-- Suggested Games -->
+      <div class="game-suggest glass">
+        Suggested for you
+        <div id="suggested" class="game-suggest-carousel"></div>
+      </div>
 
-
-            <div class="ad matrix">
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-format="autorelaxed"
-                    data-ad-client="ca-pub-5698886275599668"
-                    data-ad-slot="4835401344"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-            <div class="footer"><a href="/privacypolicy">Privacy Policy</a><a href="/termsandconditions">Terms & Conditions</a><a href="/contact">Contact Us</a></div>
-
-
-        </div>
-
-
+      <!-- Footer -->
+      <div class="footer">
+        <a href="../privacypolicy.html">Privacy Policy</a>
+        <a href="../termsandconditions.html">Terms & Conditions</a>
+        <a href="../contact.html">Contact Us</a>
+      </div>
     </div>
-    <div id="popup-ad">
-        <!-- popup-square -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-5698886275599668"
-            data-ad-slot="9969567708"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-    <div class="cool-background"></div>
+  </div>
 
-
+  <div class="cool-background"></div>
 </body>
 </html>

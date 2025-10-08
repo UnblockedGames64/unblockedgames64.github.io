@@ -47,6 +47,7 @@ async function fetchSheet(sheetName) {
 }
 
 function getIdByName(name) {
+  console.log(name);
   const item = games.find(obj => obj.name.toLowerCase() === name.toLowerCase());
   return item ? item.id : null; // returns null if not found
 }

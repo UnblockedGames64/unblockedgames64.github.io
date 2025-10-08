@@ -35,7 +35,7 @@ function openIncognitoWindow() {
 }
 
 
-document.getElementById("popup-ad").style.display = "none";
+if (document.getElementById("popup-ad")) document.getElementById("popup-ad").style.display = "none";
 
 //uncomment once adsense verified
 

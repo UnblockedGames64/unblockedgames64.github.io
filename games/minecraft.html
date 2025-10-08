@@ -1,169 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets/favicon.png">
-    <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="stylesheet" href="/styles/responsive.css">
-    <script src="/scripts/homeinject.js" defer></script>
-    <script src="/scripts/injectgames.js" defer></script>
-    <script src="/scripts/script.js" defer></script>
-    <script src="/scripts/game-analytics.js" defer></script>
-    <script defer>
-        // Example: Run on page load
-        window.addEventListener("DOMContentLoaded", async () => {
-        rowData = await fetchRow("Sheet1", getIdByName(document.getElementsByClassName("gamebar")[0].firstChild.innerHTML) + 1); // fetch row 2 of "Sheet1"
-        document.getElementById("stats").innerHTML = `${rowData[0] + 1} Views<br>${rowData[1]} Likes`
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../assets/favicon.png">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
+  <script src="../scripts/homeinject.js" defer></script>
+  <script src="../scripts/injectgames.js" defer></script>
+  <script src="../scripts/script.js" defer></script>
+  <script src="../scripts/game-analytics.js" defer></script>
+  <script defer>
+      // Example: Run on page load
+      window.addEventListener("DOMContentLoaded", async () => {
+      rowData = await fetchRow("Sheet1", getIdByName("Minecraft") + 1); // fetch row 2 of "Sheet1"
+      document.getElementById("stats").innerHTML = `${rowData[0] + 1} Views<br>${rowData[1] === "" ? "0" : rowData[1]} Likes`
 
-        // Example: increment cell A2
-        await incrementCell("Sheet1", "A" + String(getIdByName(document.getElementsByClassName("gamebar")[0].firstChild.innerHTML) + 1));
-        });
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Explore a vast collection of free unblocked games 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Unblocked Games 64">
-    <meta property="og:description" content="Explore a vast collection of free unblocked games 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
-    <meta property="og:image" content="/assets/logo.png">
-    <meta property="og:url" content="https://unblockedgames64.github.io">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Minecraft Unblocked - Unblocked Games 64</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5698886275599668"
-     crossorigin="anonymous" defer></script>
+      // Example: increment cell A2
+      await incrementCell("Sheet1", "A" + String(getIdByName(document.getElementsByClassName("gamebar")[0].firstChild.innerHTML) + 1));
+      });
+  </script>
+  <meta name="description" content="Explore unblocked games Minecraft 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Minecraft Unblocked - Unblocked Games 64">
+  <meta property="og:description" content="Explore unblocked games Minecraft 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
+  <meta property="og:image" content="../assets/logo.png">
+  <meta property="og:url" content="https://unblockedgames64.github.io/games/minecraft.html">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Minecraft Unblocked - Unblocked Games 64</title>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Minecraft",
+    "url": "https://unblockedgames64.github.io/games/minecraft.html",
+    "image": "/assets/banners/minecraft.png",
+    "description": "Explore unblocked games Minecraft 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!",
+    "genre": "Sandbox",
+    "operatingSystem": "Web browser",
+    "applicationCategory": "Game"
+  }
+  </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VYJ5H21PCG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VYJ5H21PCG');
-</script>
 
 <body>
-    <div class="header glass">
-        <img src="/assets/logo.png" alt="" class="logo">
-        <div class="header-links">
-            <a class="homelink" href="">Home</a>
-            <a href="/games">Games</a>
-            <a href="/about">About</a>
-        </div>
+  <div class="header glass">
+    <img src="../assets/logo.png" alt="Unblocked Games 64 Logo" class="logo">
+    <div class="header-links">
+      <a class="homelink" href="../index.html">Home</a>
+      <a href="../games.html">Games</a>
+      <a href="../about.html">About</a>
     </div>
-    <div class="website-body">    
-        <div id="games-sidebar" class="sidebar glass">
+  </div>
 
+  <div class="website-body">    
+    <div id="games-sidebar" class="sidebar glass"></div>
+
+    <div class="content">
+      <!-- Game Banner -->
+      <div class="game-banner">
+        <img src="/assets/banners/minecraft.png" alt="Minecraft banner">
+        <h1 class="game-header">Minecraft Unblocked</h1>
+      </div>
+
+      <p style="font-style: italic; margin: 10px; width: 95%;">Minecraft is free to play! Today, anytime, anywhere.</p>
+
+      <!-- Game Embed -->
+      <div class="game">
+        <div class="iframe">
+          <iframe id="game-iframe" src=""></iframe>
+          <div class="gamebar glass"><div>Minecraft</div>
+            <div id="stats"></div>
+            <img onclick="likeGame();" id="like-btn" src="../assets/icons/heart_plus.svg" alt="Like this game">
+            <img onclick="openFullscreen();" id="fullscreen-btn" src="../assets/icons/fullscreen.svg" alt="Play fullscreen">
+          </div>
         </div>
+      </div>
 
-        <div class="content ">
-            <div class="game-banner">
-                <img src="https://mmos.com/wp-content/uploads/2015/11/minecraft-banner.jpg">
-                <h1 class="game-header">Minecraft Unblocked</h1>
-            </div>
+      <div class="game-description glass">
+        <h1>⛏️ Minecraft Unblocked – Play Online Free</h1>
 
-            <div class="game">
-                <div class="ad vertical">    <!-- sigma vertical -->
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-5698886275599668"
-                        data-ad-slot="2405088247"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-                <div class="ad horizontal">
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-5698886275599668"
-                        data-ad-slot="4365532012"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-                <div class="iframe">
-                    <iframe id="game-iframe" src="../games-src/minecraft.html"></iframe>
-                    <div class="gamebar glass"><div>Minecraft</div><div id="stats"></div><img onclick="likeGame();" id="like-btn" src="/assets/icons/heart_plus.svg"><img onclick="openFullscreen();" id="fullscreen-btn" src="/assets/icons/fullscreen.svg"></div>
-                </div>
-                <div class="ad vertical" id="fullscreenad">
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-5698886275599668"
-                        data-ad-slot="2405088247"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-                <div class="ad horizontal">
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-5698886275599668"
-                        data-ad-slot="4365532012"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-            </div>
-            
-            <p class="game-description glass">
-                Minecraft Unblocked lets you dive into the ultimate sandbox adventure, free from restrictions. Whether you're crafting towering castles or surviving the night against mobs, this version of Minecraft is perfect for playing at school or work—no downloads, no logins, just pure creativity. Build, mine, and explore endless worlds right in your browser. If you're looking for a fun and free way to enjoy the game, Minecraft Unblocked is the best way to play online. Start building today—anytime, anywhere!
-            </p>
+<p><strong>Minecraft Unblocked</strong> is your gateway to endless creativity, exploration, and survival — all in one browser-based experience. Whether you’re crafting towering castles, digging deep into caves, or surviving the night against Creepers, Minecraft remains one of the most influential and addictive games ever made. Now, thanks to the unblocked version, you can play anywhere — at school, work, or home — without needing downloads or installations.</p>
 
-            <div class="game-suggest glass">
-                Suggested for you
-                <div id="suggested" class="game-suggest-carousel"></div>
-            </div>
+<p>Originally developed by <strong>Mojang Studios</strong>, Minecraft revolutionized gaming with its simple yet powerful concept: mine resources and craft tools to survive and build in a procedurally generated world. The unblocked version captures all the charm and creativity of the original, letting you build, explore, and survive right from your browser window.</p>
 
-            <div class="ad horizontal desktop">
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-5698886275599668"
-                    data-ad-slot="2540410499"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
+<h2>🎮 How to Play Minecraft Unblocked</h2>
+<p>The beauty of Minecraft lies in its simplicity. You start with nothing and slowly build your way up — collecting wood, crafting tools, and creating shelter before night falls. From there, the possibilities are limitless. You can explore vast landscapes, build elaborate structures, and even take on dangerous mobs lurking underground.</p>
 
-            <div class="ad matrix">
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-format="autorelaxed"
-                    data-ad-client="ca-pub-5698886275599668"
-                    data-ad-slot="4835401344"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-            <div class="footer"><a href="/privacypolicy">Privacy Policy</a><a href="/termsandconditions">Terms & Conditions</a><a href="/contact">Contact Us</a></div>
+<ul>
+  <li><strong>Movement:</strong> Use <code>WASD</code> keys to move and the mouse to look around.</li>
+  <li><strong>Mine blocks:</strong> Left-click and hold to break blocks.</li>
+  <li><strong>Place blocks:</strong> Right-click to place the selected block.</li>
+  <li><strong>Inventory:</strong> Press <code>E</code> to manage items and crafting.</li>
+  <li><strong>Survive:</strong> Build shelter before dark — hostile mobs come out at night!</li>
+</ul>
 
-        </div>
+<p>In the unblocked edition, the gameplay remains faithful to the original experience — allowing creative freedom, crafting mechanics, and sandbox exploration at your own pace. Whether you’re building pixel art, mining diamonds, or surviving in hardcore mode, Minecraft unblocked has you covered.</p>
 
+<h2>🌍 Game Modes</h2>
+<p>Minecraft offers several modes to match your playstyle, and most are available in the unblocked version:</p>
+
+<ul>
+  <li><strong>Survival Mode:</strong> Gather resources, manage hunger, and fend off monsters. Every decision matters as you fight to stay alive.</li>
+  <li><strong>Creative Mode:</strong> Unlimited blocks, no health or hunger — just pure building and imagination. Perfect for architects and artists at heart.</li>
+  <li><strong>Adventure Mode:</strong> Designed for custom maps and challenges. You can explore player-made worlds with specific rules and puzzles.</li>
+  <li><strong>Hardcore Mode:</strong> One life, permanent death. Only for the bravest players.</li>
+</ul>
+
+<h2>💡 Tips for Beginners</h2>
+<p>If you’re new to Minecraft, the first day in the world can be intimidating. Here are a few essential tips to get started:</p>
+
+<ul>
+  <li>Start by punching trees to collect wood — it’s the foundation for all crafting.</li>
+  <li>Craft a <strong>crafting table</strong> and <strong>wooden tools</strong> right away to speed up progress.</li>
+  <li>Find coal or craft charcoal for torches before nightfall to keep monsters away.</li>
+  <li>Build a simple dirt or wooden hut to protect yourself until you’re ready to explore.</li>
+  <li>Always bring food — running out of hunger can be deadly in survival mode.</li>
+</ul>
+
+<p>Once you survive your first few nights, the world opens up with endless possibilities: farming, mining for rare ores, exploring strongholds, and even traveling to other dimensions like the <strong>Nether</strong> or the <strong>End</strong>.</p>
+
+<h2>⚔️ Combat & Enemies</h2>
+<p>While Minecraft is often peaceful and creative, danger lurks in the dark. From Zombies and Skeletons to the explosive Creepers, mastering combat is key to survival. Craft swords, bows, and armor to defend yourself, and keep your surroundings well-lit to prevent mob spawns. As you progress, you can brew potions, enchant weapons, and take on challenging bosses like the <strong>Ender Dragon</strong> or <strong>Wither</strong>.</p>
+
+<h2>🎨 Build Anything You Imagine</h2>
+<p>One of Minecraft’s most magical aspects is its open-ended creativity. Players have built everything from small cottages to full-scale replicas of real cities. The unblocked version allows you to tap into that same potential without limits — whether you’re designing redstone contraptions, pixel art, or massive castles in the clouds. Every block you place contributes to your own story and world.</p>
+
+<p>You can also explore endless community-made creations. Many unblocked editions come with pre-built maps or mini-games, so you can dive into new adventures created by other players worldwide.</p>
+
+<h2>📜 History & Popularity</h2>
+<p>Since its official release in 2011, <strong>Minecraft</strong> has become the best-selling video game of all time. Its pixelated aesthetic, limitless freedom, and accessible design captured players of all ages. It’s not just a game — it’s a platform for learning, creativity, and community. Schools even use Minecraft: Education Edition to teach coding, teamwork, and problem-solving.</p>
+
+<p>The unblocked version keeps that same charm, enabling players to enjoy it anywhere, anytime. From solo builders to online multiplayer explorers, the Minecraft community continues to grow and evolve, shaping the game’s legacy more than a decade later.</p>
+
+<h2>❓ Frequently Asked Questions</h2>
+<ul>
+  <li><strong>Is Minecraft Unblocked free to play?</strong> Yes! You can play directly in your browser without downloading or paying.</li>
+  <li><strong>Can I save my world?</strong> Some unblocked versions support cloud saves or local saves — check your specific site’s options.</li>
+  <li><strong>Does it work on mobile?</strong> Many unblocked Minecraft editions are mobile-compatible with touch controls.</li>
+  <li><strong>Is multiplayer available?</strong> Certain versions include multiplayer features, so you can join servers with friends.</li>
+  <li><strong>Are mods supported?</strong> Some unblocked sites feature modded Minecraft experiences, adding new biomes, creatures, and tools.</li>
+</ul>
+
+<h2>🚀 Why Play Minecraft Unblocked?</h2>
+<p>Because it’s more than just a game — it’s an escape, a world of creativity, and a place where imagination has no boundaries. Playing Minecraft unblocked lets you access your world instantly, whether you’re bored in class, on a break at work, or just craving some creative exploration. You can hop in, build for a few minutes, or lose yourself for hours in your dream world — all without restrictions.</p>
+
+<p>With its combination of survival, creativity, and infinite replayability, <strong>Minecraft Unblocked</strong> is a timeless sandbox adventure that continues to inspire millions. From the first tree you punch to the moment you slay the Ender Dragon, every block tells part of your story.</p>
+
+<p><strong>👉 Play Minecraft Unblocked now and let your imagination run wild. Build, explore, survive — the adventure is endless!</strong></p>
+
+
+        <h2>🖼 Screenshots</h2>
+        <img src="/assets/screenshots/minecraft1.png" alt="Minecraft Level 1">
+        <img src="/assets/screenshots/minecraft2.png" alt="Minecraft advanced level">
+
+        <h2>▶ Gameplay Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-1Sy6iz43vg?si=d0Q0XKnEvGTKw1AV" title="Minecraft Gameplay" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <!-- Suggested Games -->
+      <div class="game-suggest glass">
+        Suggested for you
+        <div id="suggested" class="game-suggest-carousel"></div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <a href="../privacypolicy.html">Privacy Policy</a>
+        <a href="../termsandconditions.html">Terms & Conditions</a>
+        <a href="../contact.html">Contact Us</a>
+      </div>
     </div>
-    <div id="popup-ad" class="ad">
-        <!-- popup-square -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-5698886275599668"
-            data-ad-slot="9969567708"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-    <div class="cool-background"></div>
+  </div>
 
+  <div class="cool-background"></div>
 </body>
 </html>

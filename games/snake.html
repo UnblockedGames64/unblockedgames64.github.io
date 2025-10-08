@@ -1,205 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../assets/favicon.png">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="../styles/responsive.css">
-    <script src="../scripts/homeinject.js" defer></script>
-    <script src="../scripts/injectgames.js" defer></script>
-    <script src="../scripts/script.js" defer></script>
-    <script src="../scripts/game-analytics.js" defer></script>
-    <script defer>
-        // Example: Run on page load
-        window.addEventListener("DOMContentLoaded", async () => {
-        rowData = await fetchRow("Sheet1", getIdByName(document.getElementsByClassName("gamebar")[0].firstChild.innerHTML) + 1); // fetch row 2 of "Sheet1"
-        document.getElementById("stats").innerHTML = `${rowData[0] + 1} Views<br>${rowData[1] === "" ? "0" : rowData[1]} Likes`
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../assets/favicon.png">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
+  <script src="../scripts/homeinject.js" defer></script>
+  <script src="../scripts/injectgames.js" defer></script>
+  <script src="../scripts/script.js" defer></script>
+  <script src="../scripts/game-analytics.js" defer></script>
+  <script defer>
+      // Example: Run on page load
+      window.addEventListener("DOMContentLoaded", async () => {
+      rowData = await fetchRow("Sheet1", getIdByName("Snake") + 1); // fetch row 2 of "Sheet1"
+      document.getElementById("stats").innerHTML = `${rowData[0] + 1} Views<br>${rowData[1] === "" ? "0" : rowData[1]} Likes`
 
+      // Example: increment cell A2
+      await incrementCell("Sheet1", "A" + String(getIdByName(document.getElementsByClassName("gamebar")[0].firstChild.innerHTML) + 1));
+      });
+  </script>
+  <meta name="description" content="Explore unblocked games Snake 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
+  <meta name="robots" content="index, follow">
 
-        // Example: increment cell A2
-        await incrementCell("Sheet1", "A" + String(getIdByName(document.getElementsByClassName("gamebar")[0].firstChild.innerHTML) + 1));
-        });
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Explore unblocked games Snake 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Snake Unblocked - Unblocked Games 64">
-    <meta property="og:description" content="Explore unblocked games Snake 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
-    <meta property="og:image" content="../assets/logo.png">
-    <meta property="og:url" content="https://unblockedgames64.github.io/games/snake.html">
-    <meta property="og:type" content="website">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Snake Unblocked - Unblocked Games 64</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5698886275599668"
-     crossorigin="anonymous" defer></script>
+  <meta property="og:title" content="Snake Unblocked - Unblocked Games 64">
+  <meta property="og:description" content="Explore unblocked games Snake 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
+  <meta property="og:image" content="../assets/logo.png">
+  <meta property="og:url" content="https://unblockedgames64.github.io/games/snake.html">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Snake Unblocked - Unblocked Games 64</title>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Snake",
+    "url": "https://unblockedgames64.github.io/games/snake.html",
+    "image": "/assets/banners/snake.png",
+    "description": "Explore unblocked games Snake 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!",
+    "genre": "infinite",
+    "operatingSystem": "Web browser",
+    "applicationCategory": "Game"
+  }
+  </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VYJ5H21PCG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-
-  gtag('config', 'G-VYJ5H21PCG');
-</script>
-
 
 <body>
-    <div class="header glass">
-        <img src="../assets/logo.png" alt="" class="logo">
-        <div class="header-links">
-            <a class="homelink" href="">Home</a>
-            <a href="../games.html">Games</a>
-            <a href="../about.html">About</a>
-        </div>
+  <div class="header glass">
+    <img src="../assets/logo.png" alt="Unblocked Games 64 Logo" class="logo">
+    <div class="header-links">
+      <a class="homelink" href="../index.html">Home</a>
+      <a href="../games.html">Games</a>
+      <a href="../about.html">About</a>
     </div>
-    <div class="website-body">    
-        <div id="games-sidebar" class="sidebar glass">
+  </div>
 
+  <div class="website-body">    
+    <div id="games-sidebar" class="sidebar glass"></div>
+
+    <div class="content">
+      <!-- Game Banner -->
+      <div class="game-banner">
+        <img src="/assets/banners/snake.png" alt="Snake banner">
+        <h1 class="game-header">Snake Unblocked</h1>
+      </div>
+
+      <p style="font-style: italic; margin: 10px; width: 95%;">Snake is free to play! Today, anytime, anywhere.</p>
+
+      <!-- Game Embed -->
+      <div class="game">
+        <div class="iframe">
+          <iframe id="game-iframe" src="\games-src\snake.html"></iframe>
+          <div class="gamebar glass"><div>Snake</div>
+            <div id="stats"></div>
+            <img onclick="likeGame();" id="like-btn" src="../assets/icons/heart_plus.svg" alt="Like this game">
+            <img onclick="openFullscreen();" id="fullscreen-btn" src="../assets/icons/fullscreen.svg" alt="Play fullscreen">
+          </div>
         </div>
+      </div>
 
+      <div class="game-description glass">
+        <h1>🐍 Snake Unblocked – Play Online Free</h1>
 
-        <div class="content">
-            <div class="game-banner">
-                <img src="https://stroudie2.github.io/assets/img/blog/snake-game.jpg">
-                <h1 class="game-header">Snake Unblocked</h1>
-            </div>
+<p><strong>Snake Unblocked</strong> is the classic arcade game that has entertained players for decades. Simple in concept but endlessly addictive, your goal is to control a growing snake, collect food, and avoid running into walls or yourself. The unblocked version lets you play directly in your browser, anywhere and anytime, without downloads or restrictions, making it perfect for school, work, or home breaks.</p>
 
+<p>Originally popularized on early mobile phones, <em>Snake</em> has become a timeless game due to its easy-to-learn mechanics and challenging gameplay. As the snake grows longer, every movement requires careful planning and quick reflexes. The simple graphics and intuitive controls make it accessible to players of all ages, while the increasing difficulty keeps it engaging for experts.</p>
 
-            <div class="game">
-                <div class="ad vertical">    <!-- sigma vertical -->
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-5698886275599668"
-                        data-ad-slot="2405088247"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-                <div class="ad horizontal">
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-5698886275599668"
-                        data-ad-slot="4365532012"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-                <div class="iframe">
-                    <iframe id="game-iframe" src="../games-src/snake.html"></iframe>
-                    <div class="gamebar glass"><div>Snake</div><div id="stats"></div><img onclick="likeGame();" id="like-btn" src="../assets/icons/heart_plus.svg"><img onclick="openFullscreen();" id="fullscreen-btn" src="../assets/icons/fullscreen.svg"></div>
-                </div>
-                <div class="ad vertical" id="fullscreenad">
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-5698886275599668"
-                        data-ad-slot="2405088247"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-                <div class="ad horizontal">
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-5698886275599668"
-                        data-ad-slot="4365532012"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-            </div>
-           
-            <div class="game-description glass">
-                <h1>🐍 Snake Unblocked – Play Online Free</h1>
+<h2>🎮 How to Play Snake</h2>
+<p>Snake is easy to pick up but challenging to master. The controls and objectives are straightforward:</p>
 
-<p><strong>Snake Unblocked</strong> is the classic arcade game where you guide a growing snake to eat food while avoiding walls and your own tail. Simple, addictive, and endlessly replayable, Snake has been a favorite for decades and is now available to play free online without restrictions.</p>
-
-<h2>🎮 How to Play</h2>
 <ul>
-  <li>Use the arrow keys (or swipe on mobile) to control your snake’s direction.</li>
-  <li>Eat the food that appears on the board to grow longer.</li>
-  <li>Avoid running into the walls or your own tail.</li>
-  <li>Survive as long as possible and aim for the highest score.</li>
+  <li><strong>Arrow Keys / WASD:</strong> Move the snake up, down, left, or right.</li>
+  <li><strong>Objective:</strong> Collect food to grow your snake while avoiding collisions with walls or yourself.</li>
+  <li><strong>Score Points:</strong> Each food item collected increases your score and the snake’s length.</li>
+  <li><strong>Survival:</strong> The longer you survive and the more food you collect, the higher your score.</li>
 </ul>
 
-<h2>⭐ Features</h2>
+<p>Planning your movements and anticipating the snake’s growth are key. One wrong turn can end your run, but every success is satisfying and encourages you to try again.</p>
+
+<h2>🎯 Tips for Beginners</h2>
+<p>If you’re new to <strong>Snake</strong>, these tips will help you get started:</p>
+
 <ul>
-  <li>Classic and timeless arcade gameplay.</li>
-  <li>Easy to learn, hard to master controls.</li>
-  <li>Endless replayability with increasing challenge as your snake grows.</li>
-  <li>100% free and school-safe with this unblocked version.</li>
+  <li>Start slowly and plan your moves to avoid crashing.</li>
+  <li>Focus on keeping the snake in open areas to give yourself room to maneuver.</li>
+  <li>Use the edges strategically, but avoid corner traps where you might get stuck.</li>
+  <li>Prioritize survival over collecting every piece of food immediately.</li>
+  <li>Practice controlling the snake’s speed and direction for smoother gameplay.</li>
+</ul>
+
+<h2>🔥 Advanced Strategies</h2>
+<p>As you become more skilled, advanced strategies can help you achieve higher scores:</p>
+
+<ul>
+  <li>Plan your path in advance, leaving space for the snake to grow.</li>
+  <li>Create a looping pattern to control movement and avoid accidental collisions.</li>
+  <li>Use the snake’s body as a guide to manage tight spaces.</li>
+  <li>Stay calm as the speed increases — precision beats speed in the long run.</li>
+  <li>Learn to anticipate how the snake will move after collecting food to avoid getting trapped.</li>
+</ul>
+
+<h2>📜 Game Background & Popularity</h2>
+<p><em>Snake</em> has remained popular for decades due to its simplicity, challenge, and addictive gameplay. From early Nokia phones to modern browsers, the game has continuously found new audiences. Its appeal lies in the combination of strategy, reflexes, and the satisfaction of watching your snake grow longer and longer. The unblocked version keeps this timeless fun accessible to anyone, anytime.</p>
+
+<h2>❓ Frequently Asked Questions</h2>
+<ul>
+  <li><strong>Can I play on mobile?</strong> Yes, Snake Unblocked works perfectly on tablets and smartphones.</li>
+  <li><strong>Do I need an account?</strong> No — you can start playing immediately without registration.</li>
+  <li><strong>Is it beginner-friendly?</strong> Yes, the simple controls make it easy for new players to start, though high scores require skill.</li>
+  <li><strong>Are there multiple game modes?</strong> Some versions include classic, speed, or maze modes for variety.</li>
+  <li><strong>Can I track my high score?</strong> Many unblocked versions allow you to see your top scores locally in your browser.</li>
 </ul>
 
 <h2>🚀 Why Play Snake Unblocked?</h2>
-<p>Snake is one of the most iconic games ever created, offering quick, fun, and challenging gameplay for all ages. With this <strong>unblocked version</strong>, you can play at school, work, or anywhere online without restrictions. See how long you can survive as your snake grows bigger and faster!</p>
+<p>Snake is the ultimate test of reflexes, planning, and patience. Its simple gameplay makes it perfect for quick sessions, while the challenge of achieving a high score keeps players engaged for hours. The unblocked version ensures you can enjoy this classic game anywhere without downloads or restrictions. Every move matters, every piece of food counts, and every run is a chance to beat your previous best.</p>
 
-<p><strong>👉 Play Snake Unblocked now and enjoy the ultimate retro arcade challenge!</strong></p>
+<p>Whether you’re reliving childhood memories or discovering the game for the first time, <strong>Snake Unblocked</strong> delivers endless fun, challenge, and satisfaction. Can you grow your snake to the maximum length and dominate the leaderboard?</p>
 
-            </div>
-
-
-            <div class="game-suggest glass">
-                Suggested for you
-                <div id="suggested" class="game-suggest-carousel"></div>
-            </div>
+<p><strong>👉 Play Snake Unblocked today and see how long you can survive — precision, patience, and strategy are the keys to success!</strong></p>
 
 
-            <div class="ad horizontal desktop">
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-5698886275599668"
-                    data-ad-slot="2540410499"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
+        <h2>🖼 Screenshots</h2>
+        <img src="/assets/screenshots/snake1.png" alt="Snake Level 1">
+        <img src="/assets/screenshots/snake2.png" alt="Snake advanced level">
 
+        <h2>▶ Beginner Tutorial Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/At8v_Yc044Y?si=-KFiKBbkrvxo3DYb" title="Snake Gameplay" frameborder="0" allowfullscreen></iframe>
+      </div>
 
-            <div class="ad matrix">
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-format="autorelaxed"
-                    data-ad-client="ca-pub-5698886275599668"
-                    data-ad-slot="4835401344"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-            <div class="footer"><a href="../privacypolicy.html">Privacy Policy</a><a href="../termsandconditions.html">Terms & Conditions</a><a href="../contact.html">Contact Us</a></div>
+      <!-- Suggested Games -->
+      <div class="game-suggest glass">
+        Suggested for you
+        <div id="suggested" class="game-suggest-carousel"></div>
+      </div>
 
-
-        </div>
-
-
+      <!-- Footer -->
+      <div class="footer">
+        <a href="../privacypolicy.html">Privacy Policy</a>
+        <a href="../termsandconditions.html">Terms & Conditions</a>
+        <a href="../contact.html">Contact Us</a>
+      </div>
     </div>
-    <div id="popup-ad">
-        <!-- popup-square -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-5698886275599668"
-            data-ad-slot="9969567708"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-    <div class="cool-background"></div>
+  </div>
 
-
+  <div class="cool-background"></div>
 </body>
 </html>

@@ -365,6 +365,7 @@ h2 {
     width: 100%;
     max-width: calc(100% - 40px);
     margin: 20px;
+    margin-top: 0px;
     margin-bottom: 0px;
 }
 

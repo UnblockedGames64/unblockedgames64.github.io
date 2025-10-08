@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<script>function _0x4e83(){const _0x2a5b30=['136BUpMRl','includes','16980ldAPVE','Whoa buddy, not so fast. You gotta open this file from our website.','top','This page is embedded inside an iframe.','836731kBUkdU','218816oaaAxC','497875oRNmyR','log','self','531kGOuND','/games/','49526BBvgfA','1509120GcfuCq','6344CzRYer','referrer'];_0x4e83=function(){return _0x2a5b30;};return _0x4e83();}function _0x1777(_0x1dce8e,_0x3e601f){const _0x4e83f2=_0x4e83();return _0x1777=function(_0x177779,_0x5a8d47){_0x177779=_0x177779-0x18b;let _0x219c4a=_0x4e83f2[_0x177779];return _0x219c4a;},_0x1777(_0x1dce8e,_0x3e601f);}(function(_0x1b89ff,_0x48b135){const _0x1e0241=_0x1777,_0x289c3b=_0x1b89ff();while(!![]){try{const _0x5914e4=-parseInt(_0x1e0241(0x18d))/0x1+-parseInt(_0x1e0241(0x193))/0x2+parseInt(_0x1e0241(0x199))/0x3*(parseInt(_0x1e0241(0x197))/0x4)+parseInt(_0x1e0241(0x18e))/0x5+parseInt(_0x1e0241(0x194))/0x6+-parseInt(_0x1e0241(0x18c))/0x7+-parseInt(_0x1e0241(0x195))/0x8*(parseInt(_0x1e0241(0x191))/0x9);if(_0x5914e4===_0x48b135)break;else _0x289c3b['push'](_0x289c3b['shift']());}catch(_0x323948){_0x289c3b['push'](_0x289c3b['shift']());}}}(_0x4e83,0x20a04),(function(){const _0x17b4fc=_0x1777,_0x16f1af=window[_0x17b4fc(0x190)]!==window[_0x17b4fc(0x19b)];_0x16f1af&&String(document[_0x17b4fc(0x196)])[_0x17b4fc(0x198)](_0x17b4fc(0x192))?console[_0x17b4fc(0x18f)](_0x17b4fc(0x18b)):(alert(_0x17b4fc(0x19a)),window['close']());}()));</script>
+    <base href="https://cdn.jsdelivr.net/gh/web-ports/hollow-knight@main/">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Hollow Knight</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background: #231F20;
+        }
+
+        #unity-container {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="loading-text" style="color: white; font-size: 48px; font-family: cursive; text-align: center; margin-top: 20px;"> LOADING... </div>
+    <div hidden id="unity-container" class="unity-desktop">
+        <canvas id="unity-canvas"></canvas>
+        <div id="unity-loading-bar">
+            <div id="unity-logo"></div>
+            <div id="unity-progress-bar-empty">
+                <div id="unity-progress-bar-full"></div>
+            </div>
+        </div>
+        <div id="unity-mobile-warning"> WebGL builds are not supported on mobile devices. </div>
+    </div>
+    <script>
+        var loadingText = document.querySelector("#loading-text");
+        let totalBytes = 0;
+        let loadedBytes = 0;
+        async function getSize(url) {
+            try {
+                const res = await fetch(url, {
+                    method: "HEAD"
+                });
+                return parseInt(res.headers.get("Content-Length") || "0", 10);
+            } catch {
+                return 0;
+            }
+        }
+        async function fetchWithProgress(url) {
+            const response = await fetch(url);
+            const reader = response.body.getReader();
+            let chunks = [];
+            let received = 0;
+            while (true) {
+                const {
+                    done,
+                    value
+                } = await reader.read();
+                if (done) break;
+                received += value.length;
+                loadedBytes += value.length;
+                chunks.push(value);
+                let mbDone = (loadedBytes / (1024 * 1024)).toFixed(2);
+                let mbTotal = '909.17';
+                loadingText.textContent = `LOADING... ${mbDone} MB / ${mbTotal} MB`;
+            }
+            let fullBuffer = new Uint8Array(received);
+            let offset = 0;
+            for (let chunk of chunks) {
+                fullBuffer.set(chunk, offset);
+                offset += chunk.length;
+            }
+            return fullBuffer.buffer;
+        }
+        async function mergeFiles(fileParts) {
+            const buffers = await Promise.all(fileParts.map(part => fetchWithProgress(part)));
+            const mergedBlob = new Blob(buffers);
+            return URL.createObjectURL(mergedBlob);
+        }
+
+        function getParts(file, start, end) {
+            let parts = [];
+            for (let i = start; i <= end; i++) {
+                parts.push(file + ".part" + i);
+            }
+            return parts;
+        }
+        (async () => {
+            const allParts = [...getParts("Build/bog.data", 1, 44), ...getParts("Build/bog.wasm", 1, 2), ];
+            const sizes = await Promise.all(allParts.map(getSize));
+            totalBytes = sizes.reduce((a, b) => a + b, 0);
+            const [dataUrl, wasmurl] = await Promise.all([
+                mergeFiles(getParts("Build/bog.data", 1, 44)),
+                mergeFiles(getParts("Build/bog.wasm", 1, 2)),
+            ]);
+            var buildUrl = "Build";
+            var loaderUrl = buildUrl + "/bog.loader.js";
+            var config = {
+                dataUrl: dataUrl,
+                frameworkUrl: buildUrl + "/bog.framework.js",
+                codeUrl: wasmurl,
+                streamingAssetsUrl: "StreamingAssets",
+                companyName: "Team Cherry & Truffled",
+                productName: "Hollow Knight",
+                productVersion: "1.0",
+            };
+            var container = document.querySelector("#unity-container");
+            container.hidden = false;
+            var canvas = document.querySelector("#unity-canvas");
+            var loadingBar = document.querySelector("#unity-loading-bar");
+            var progressBarFull = document.querySelector("#unity-progress-bar-full");
+            var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+            var mobileWarning = document.querySelector("#unity-mobile-warning");
+            if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                container.className = "unity-mobile";
+                config.devicePixelRatio = 1;
+                mobileWarning.style.display = "block";
+                setTimeout(() => {
+                    mobileWarning.style.display = "none";
+                }, 5000);
+            } else {
+              if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                var meta = document.createElement('meta');
+                meta.name = 'viewport';
+                meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+                document.getElementsByTagName('head')[0].appendChild(meta);
+                container.className = "unity-mobile";
+                canvas.className = "unity-mobile";
+            } else {
+                function resizeCanvas() {
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+                    canvas.style.width = window.innerWidth + "px";
+                    canvas.style.height = window.innerHeight + "px";
+                }
+                resizeCanvas();
+                window.addEventListener('resize', resizeCanvas);
+            }
+            }
+            loadingBar.style.display = "block";
+            var script = document.createElement("script");
+            script.src = loaderUrl;
+            script.onload = () => {
+                createUnityInstance(canvas, config, (progress) => {
+                    progressBarFull.style.width = 100 * progress + "%";
+                }).then((unityInstance) => {
+                  loadingText.remove();
+                    loadingBar.style.display = "none";
+                    canvas.style.display = "block";
+                }).catch((message) => {
+                    alert(message);
+                });
+            };
+            document.body.appendChild(script);
+        })();
+    </script>
+</body>
+
+</html>

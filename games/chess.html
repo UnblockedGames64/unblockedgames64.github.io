@@ -1,205 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets/favicon.png">
-    <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="stylesheet" href="/styles/responsive.css">
-    <script src="/scripts/homeinject.js" defer></script>
-    <script src="/scripts/injectgames.js" defer></script>
-    <script src="/scripts/script.js" defer></script>
-    <script src="/scripts/game-analytics.js" defer></script>
-    <script defer>
-        // Example: Run on page load
-        window.addEventListener("DOMContentLoaded", async () => {
-        rowData = await fetchRow("Sheet1", getIdByName(document.getElementsByClassName("gamebar")[0].firstChild.innerHTML) + 1); // fetch row 2 of "Sheet1"
-        document.getElementById("stats").innerHTML = `${rowData[0] + 1} Views<br>${rowData[1] === "" ? "0" : rowData[1]} Likes`
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../assets/favicon.png">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
+  <script src="../scripts/homeinject.js" defer></script>
+  <script src="../scripts/injectgames.js" defer></script>
+  <script src="../scripts/script.js" defer></script>
+  <script src="../scripts/game-analytics.js" defer></script>
+  <script defer>
+      // Example: Run on page load
+      window.addEventListener("DOMContentLoaded", async () => {
+      rowData = await fetchRow("Sheet1", getIdByName("Chess") + 1); // fetch row 2 of "Sheet1"
+      document.getElementById("stats").innerHTML = `${rowData[0] + 1} Views<br>${rowData[1] === "" ? "0" : rowData[1]} Likes`
 
+      // Example: increment cell A2
+      await incrementCell("Sheet1", "A" + String(getIdByName(document.getElementsByClassName("gamebar")[0].firstChild.innerHTML) + 1));
+      });
+  </script>
+  <meta name="description" content="Explore unblocked games Chess 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
+  <meta name="robots" content="index, follow">
 
-        // Example: increment cell A2
-        await incrementCell("Sheet1", "A" + String(getIdByName(document.getElementsByClassName("gamebar")[0].firstChild.innerHTML) + 1));
-        });
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Explore unblocked games Chess 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Chess Unblocked - Unblocked Games 64">
-    <meta property="og:description" content="Explore unblocked games Chess 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
-    <meta property="og:image" content="/assets/logo.png">
-    <meta property="og:url" content="https://unblockedgames64.github.io/games/chess.html">
-    <meta property="og:type" content="website">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Chess Unblocked - Unblocked Games 64</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5698886275599668"
-     crossorigin="anonymous" defer></script>
+  <meta property="og:title" content="Chess Unblocked - Unblocked Games 64">
+  <meta property="og:description" content="Explore unblocked games Chess 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
+  <meta property="og:image" content="../assets/logo.png">
+  <meta property="og:url" content="https://unblockedgames64.github.io/games/chess.html">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Chess Unblocked - Unblocked Games 64</title>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Chess",
+    "url": "https://unblockedgames64.github.io/games/chess.html",
+    "image": "/assets/banners/chess.png",
+    "description": "Explore unblocked games Chess 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!",
+    "genre": "Strategy",
+    "operatingSystem": "Web browser",
+    "applicationCategory": "Game"
+  }
+  </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VYJ5H21PCG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-
-  gtag('config', 'G-VYJ5H21PCG');
-</script>
-
 
 <body>
-    <div class="header glass">
-        <img src="/assets/logo.png" alt="" class="logo">
-        <div class="header-links">
-            <a class="homelink" href="">Home</a>
-            <a href="/games">Games</a>
-            <a href="/about">About</a>
-        </div>
+  <div class="header glass">
+    <img src="../assets/logo.png" alt="Unblocked Games 64 Logo" class="logo">
+    <div class="header-links">
+      <a class="homelink" href="../index.html">Home</a>
+      <a href="../games.html">Games</a>
+      <a href="../about.html">About</a>
     </div>
-    <div class="website-body">    
-        <div id="games-sidebar" class="sidebar glass">
+  </div>
 
+  <div class="website-body">    
+    <div id="games-sidebar" class="sidebar glass"></div>
+
+    <div class="content">
+      <!-- Game Banner -->
+      <div class="game-banner">
+        <img src="/assets/banners/chess.png" alt="Chess banner">
+        <h1 class="game-header">Chess Unblocked</h1>
+      </div>
+
+      <p style="font-style: italic; margin: 10px; width: 95%;">Chess is free to play! Today, anytime, anywhere.</p>
+
+      <!-- Game Embed -->
+      <div class="game">
+        <div class="iframe">
+          <iframe id="game-iframe" src="\games-src\Chess-master\chess.html"></iframe>
+          <div class="gamebar glass"><div>Chess</div>
+            <div id="stats"></div>
+            <img onclick="likeGame();" id="like-btn" src="../assets/icons/heart_plus.svg" alt="Like this game">
+            <img onclick="openFullscreen();" id="fullscreen-btn" src="../assets/icons/fullscreen.svg" alt="Play fullscreen">
+          </div>
         </div>
+      </div>
 
+      <div class="game-description glass">
+        <h1>♟️ Chess Unblocked – Play Online Free</h1>
 
-        <div class="content">
-            <div class="game-banner">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/005/389/700/small_2x/a-chess-set-in-black-on-a-white-isolated-background-world-chess-day-banner-for-the-holiday-in-the-chess-style-illustration-vector.jpg">
-                <h1 class="game-header">Chess Unblocked</h1>
-            </div>
+<p><strong>Chess Unblocked</strong> brings one of the world’s oldest and most strategic games right to your browser. Whether you’re a complete beginner or a seasoned grandmaster, this online version lets you sharpen your mind, test your logic, and challenge friends or AI opponents anytime, anywhere — no downloads, no restrictions. Perfect for schools, work breaks, or casual play at home, Chess Unblocked is both relaxing and deeply competitive.</p>
 
+<p>Chess has stood the test of time for over 1,500 years. It’s a game of intellect, patience, and precision — a battle between two minds where every move can shift the balance of power. The goal is simple yet endlessly complex: capture your opponent’s king while protecting your own. Each game tells its own story of tactics, traps, and triumphs.</p>
 
-            <div class="game">
-                <div class="ad vertical">    <!-- sigma vertical -->
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-5698886275599668"
-                        data-ad-slot="2405088247"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-                <div class="ad horizontal">
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-5698886275599668"
-                        data-ad-slot="4365532012"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-                <div class="iframe">
-                    <iframe id="game-iframe" src="../games-src/Chess-master/chess.html"></iframe>
-                    <div class="gamebar glass"><div>Chess</div><div id="stats"></div><img onclick="likeGame();" id="like-btn" src="/assets/icons/heart_plus.svg"><img onclick="openFullscreen();" id="fullscreen-btn" src="/assets/icons/fullscreen.svg"></div>
-                </div>
-                <div class="ad vertical" id="fullscreenad">
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-5698886275599668"
-                        data-ad-slot="2405088247"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-                <div class="ad horizontal">
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-5698886275599668"
-                        data-ad-slot="4365532012"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-            </div>
-           
-            <div class="game-description glass">
-                <h1>♟️ Chess Unblocked – Play Online Free</h1>
+<h2>🎮 How to Play Chess</h2>
+<p>Chess is played on an 8x8 grid with alternating light and dark squares. Each player begins with 16 pieces: one king, one queen, two rooks, two bishops, two knights, and eight pawns. The white pieces always move first, and players alternate turns. The objective is to checkmate your opponent — meaning their king is under threat and has no legal moves left.</p>
 
-<p><strong>Chess Unblocked</strong> is the classic strategy board game brought to your browser, where you can test your mind against the computer or a friend. Outsmart your opponent, control the board, and checkmate the king to win.</p>
-
-<h2>🎮 How to Play</h2>
 <ul>
-  <li>Move your pieces strategically across the board.</li>
-  <li>Control the center to gain an advantage.</li>
-  <li>Use tactics like forks, pins, and skewers to outmaneuver your opponent.</li>
-  <li>Checkmate the opposing king to secure victory.</li>
+  <li><strong>King:</strong> Moves one square in any direction. Protect this piece at all costs.</li>
+  <li><strong>Queen:</strong> The most powerful piece; moves any number of squares in any direction.</li>
+  <li><strong>Rook:</strong> Moves horizontally or vertically any number of squares.</li>
+  <li><strong>Bishop:</strong> Moves diagonally across the board.</li>
+  <li><strong>Knight:</strong> Moves in an L-shape — two squares in one direction, then one sideways.</li>
+  <li><strong>Pawn:</strong> Moves forward one square but captures diagonally. Can promote to any other piece when reaching the opponent’s back rank.</li>
 </ul>
 
-<h2>⭐ Features</h2>
+<p>The key to winning is not just knowing how the pieces move, but <em>understanding</em> how they work together. Every piece has a purpose — from pawns controlling the center to rooks guarding open lines. Strategic placement, timing, and foresight determine the outcome of every match.</p>
+
+<h2>🧠 Strategies for Success</h2>
+<p>Even if you’re new to the game, you can start improving quickly by following a few core principles. Here are some essential strategies to keep in mind:</p>
+
 <ul>
-  <li>Classic chess gameplay in an easy-to-use online format.</li>
-  <li>Play against AI or a friend in multiplayer mode.</li>
-  <li>No downloads or sign-ups required – play instantly in your browser.</li>
-  <li>100% free and school-safe with this unblocked version.</li>
+  <li><strong>Control the Center:</strong> Move pawns and pieces to occupy or influence the middle squares (e4, d4, e5, d5). This gives you better mobility.</li>
+  <li><strong>Develop Your Pieces:</strong> Bring knights and bishops out early. Avoid moving the same piece repeatedly in the opening.</li>
+  <li><strong>Protect Your King:</strong> Castle early to secure your king and connect your rooks.</li>
+  <li><strong>Think Ahead:</strong> Always plan two or three moves ahead, anticipating your opponent’s responses.</li>
+  <li><strong>Control the Endgame:</strong> Simplify when ahead. Trade pieces, not pawns, to make victory easier.</li>
 </ul>
 
-<h2>🚀 Why Play Chess Unblocked?</h2>
-<p>Chess is one of the oldest and most respected games of strategy, perfect for sharpening your mind and testing your problem-solving skills. With this <strong>unblocked version</strong>, you can enjoy the game anytime – at school, work, or home – without restrictions. Challenge yourself, improve your skills, and climb to grandmaster-level play.</p>
+<p>Chess rewards patience and creativity. A single clever move can turn defeat into victory. Whether you favor aggressive attacks or slow positional play, there’s a strategy that fits your style.</p>
 
-<p><strong>👉 Play Chess Unblocked now and become the ultimate strategist!</strong></p>
+<h2>🔥 Play Modes</h2>
+<p><strong>Chess Unblocked</strong> usually includes multiple play options so you can enjoy it however you like:</p>
 
-            </div>
+<ul>
+  <li><strong>Vs Computer:</strong> Test your skills against AI opponents of varying difficulty.</li>
+  <li><strong>Vs Friend:</strong> Challenge a buddy on the same device or online.</li>
+  <li><strong>Puzzles:</strong> Solve tactical challenges to practice forks, pins, and checkmates.</li>
+  <li><strong>Timed Mode:</strong> Add the thrill of the clock for a fast-paced experience.</li>
+</ul>
+
+<p>Each mode strengthens different parts of your game — tactics, speed, memory, and long-term planning.</p>
+
+<h2>📚 A Brief History of Chess</h2>
+<p>Chess originated in India over a millennium ago as a game called <em>Chaturanga</em>. It evolved through Persia and the Islamic world before spreading to medieval Europe, where it took the form we know today. Over centuries, it’s been played by kings, philosophers, and geniuses alike. Modern legends like Garry Kasparov and Magnus Carlsen have elevated it to a worldwide phenomenon.</p>
+
+<p>Today, Chess Unblocked brings that same legacy to your fingertips. With instant access, you can learn classic openings like the Sicilian Defense, the Queen’s Gambit, or the King’s Indian Defense, and master tactics that have stood the test of time.</p>
+
+<h2>⚡ Tips for Beginners</h2>
+<ul>
+  <li>Try to control the board early instead of chasing your opponent’s pieces.</li>
+  <li>Look for forks (one move that attacks two pieces at once).</li>
+  <li>Keep your pieces coordinated — they’re stronger together than apart.</li>
+  <li>Never move your queen too early; she’s powerful but vulnerable.</li>
+  <li>Review your games to learn from mistakes — that’s how real improvement happens.</li>
+</ul>
+
+<h2>❓ Frequently Asked Questions</h2>
+<ul>
+  <li><strong>Can I play on mobile?</strong> Yes, Chess Unblocked runs smoothly on phones and tablets.</li>
+  <li><strong>Do I need an account?</strong> No — you can play instantly in most browser-based versions.</li>
+  <li><strong>Is there multiplayer?</strong> Many versions let you challenge friends or random players online.</li>
+  <li><strong>What makes this version “unblocked”?</strong> It bypasses network restrictions, allowing play even in restricted environments like school or work.</li>
+  <li><strong>Can I improve by playing unblocked chess?</strong> Absolutely. Regular practice against different difficulty levels is a great way to learn pattern recognition and tactics.</li>
+</ul>
+
+<h2>🏆 Why Play Chess Unblocked?</h2>
+<p>Playing chess online isn’t just fun — it’s one of the best ways to boost your mind. It improves memory, focus, and decision-making. Whether you have five minutes or an hour, each match challenges your logic and creativity in new ways. The unblocked version ensures you can play anywhere, anytime, without downloads or restrictions.</p>
+
+<p>So whether you’re relaxing during a break, competing against friends, or practicing new openings, <strong>Chess Unblocked</strong> lets you experience the timeless brilliance of chess instantly. It’s classic, strategic, and endlessly replayable — a true test of intellect that never goes out of style.</p>
+
+<p><strong>♞ Start your match today — play Chess Unblocked and become the grandmaster of your own game!</strong></p>
 
 
-            <div class="game-suggest glass">
-                Suggested for you
-                <div id="suggested" class="game-suggest-carousel"></div>
-            </div>
+        <h2>🖼 Screenshots</h2>
+        <img src="/assets/screenshots/chess1.png" alt="Chess Level 1">
+        <img src="/assets/screenshots/chess2.png" alt="Chess advanced level">
 
+        <h2>▶ Beginner Tutorial Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/OCSbzArwB10?si=rozZbsPrmThJ849X" title="Chess Gameplay" frameborder="0" allowfullscreen></iframe>
+      </div>
 
-            <div class="ad horizontal desktop">
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-5698886275599668"
-                    data-ad-slot="2540410499"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
+      <!-- Suggested Games -->
+      <div class="game-suggest glass">
+        Suggested for you
+        <div id="suggested" class="game-suggest-carousel"></div>
+      </div>
 
-
-            <div class="ad matrix">
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-format="autorelaxed"
-                    data-ad-client="ca-pub-5698886275599668"
-                    data-ad-slot="4835401344"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-            <div class="footer"><a href="/privacypolicy">Privacy Policy</a><a href="/termsandconditions">Terms & Conditions</a><a href="/contact">Contact Us</a></div>
-
-
-        </div>
-
-
+      <!-- Footer -->
+      <div class="footer">
+        <a href="../privacypolicy.html">Privacy Policy</a>
+        <a href="../termsandconditions.html">Terms & Conditions</a>
+        <a href="../contact.html">Contact Us</a>
+      </div>
     </div>
-    <div id="popup-ad">
-        <!-- popup-square -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-5698886275599668"
-            data-ad-slot="9969567708"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-    <div class="cool-background"></div>
+  </div>
 
-
+  <div class="cool-background"></div>
 </body>
 </html>
