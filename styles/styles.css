@@ -126,7 +126,9 @@ button {
     color: white;
     margin-top: 10px;
 }
-
+#searchresults {
+    width: 100%;
+}
 .sidebar a {
     text-decoration: none;
     transition: 0.3s ease;
