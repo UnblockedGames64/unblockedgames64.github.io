@@ -13,6 +13,42 @@ filelocation = ""
 
 INJECT_SCRIPT = """<script>function _0x4e83(){const _0x2a5b30=['136BUpMRl','includes','16980ldAPVE','Whoa\x20buddy,\x20not\x20so\x20fast.\x20You\x20gotta\x20open\x20this\x20file\x20from\x20our\x20website.','top','This\x20page\x20is\x20embedded\x20inside\x20an\x20iframe.','836731kBUkdU','218816oaaAxC','497875oRNmyR','log','self','531kGOuND','/games/','49526BBvgfA','1509120GcfuCq','6344CzRYer','referrer'];_0x4e83=function(){return _0x2a5b30;};return _0x4e83();}function _0x1777(_0x1dce8e,_0x3e601f){const _0x4e83f2=_0x4e83();return _0x1777=function(_0x177779,_0x5a8d47){_0x177779=_0x177779-0x18b;let _0x219c4a=_0x4e83f2[_0x177779];return _0x219c4a;},_0x1777(_0x1dce8e,_0x3e601f);}(function(_0x1b89ff,_0x48b135){const _0x1e0241=_0x1777,_0x289c3b=_0x1b89ff();while(!![]){try{const _0x5914e4=-parseInt(_0x1e0241(0x18d))/0x1+-parseInt(_0x1e0241(0x193))/0x2+parseInt(_0x1e0241(0x199))/0x3*(parseInt(_0x1e0241(0x197))/0x4)+parseInt(_0x1e0241(0x18e))/0x5+parseInt(_0x1e0241(0x194))/0x6+-parseInt(_0x1e0241(0x18c))/0x7+-parseInt(_0x1e0241(0x195))/0x8*(parseInt(_0x1e0241(0x191))/0x9);if(_0x5914e4===_0x48b135)break;else _0x289c3b['push'](_0x289c3b['shift']());}catch(_0x323948){_0x289c3b['push'](_0x289c3b['shift']());}}}(_0x4e83,0x20a04),(function(){const _0x17b4fc=_0x1777,_0x16f1af=window[_0x17b4fc(0x190)]!==window[_0x17b4fc(0x19b)];_0x16f1af&&String(document[_0x17b4fc(0x196)])[_0x17b4fc(0x198)](_0x17b4fc(0x192))?console[_0x17b4fc(0x18f)](_0x17b4fc(0x18b)):(alert(_0x17b4fc(0x19a)),window['close']());}()));</script>"""
 
+def replace_in_all_html(find_text, replace_text, root_dir="."):
+    """
+    Replaces all occurrences of 'find_text' with 'replace_text'
+    in every HTML file in the root directory and /games/ folder.
+
+    :param find_text: The text or substring to find.
+    :param replace_text: The text to replace it with.
+    :param root_dir: Root directory (default is current).
+    """
+    html_files = []
+
+    # Root-level HTML files
+    for file in os.listdir(root_dir):
+        if file.endswith(".html") and os.path.isfile(os.path.join(root_dir, file)):
+            html_files.append(os.path.join(root_dir, file))
+
+    # /games/ folder HTML files
+    games_folder = os.path.join(root_dir, "games")
+    if os.path.exists(games_folder) and os.path.isdir(games_folder):
+        for file in os.listdir(games_folder):
+            if file.endswith(".html") and os.path.isfile(os.path.join(games_folder, file)):
+                html_files.append(os.path.join(games_folder, file))
+
+    # Loop through files and replace text
+    for file_path in html_files:
+        with open(file_path, "r", encoding="utf-8") as f:
+            content = f.read()
+
+        if find_text in content:
+            new_content = content.replace(find_text, replace_text)
+            with open(file_path, "w", encoding="utf-8") as f:
+                f.write(new_content)
+            print(f"✅ Replaced text in {file_path}")
+        else:
+            print(f"⚠️ No matches found in {file_path}")
+
 def insert_text_in_searchresults(text_to_insert, root_dir="."):
     """
     Loops through all HTML files in root and /games/ folder, 
@@ -386,7 +422,13 @@ def delete_file():
         print("File not found in games folder.")
 
 def main():
-    insert_text_in_searchresults('\n                 <a href="/games/drive-mad"><img src="/assets/game-icons/drive-mad.png"> Drive Mad</a>')
+    replace_in_all_html('''      <div class="footer">
+        <a href="../privacypolicy.html">Privacy Policy</a>
+        <a href="../termsandconditions.html">Terms & Conditions</a>
+        <a href="../contact.html">Contact Us</a>
+      </div>''', '''        <a href="/privacypolicy">Privacy Policy</a>
+        <a href="/termsandconditions">Terms & Conditions</a>
+        <a href="/contact">Contact Us</a>''')
 
 if __name__ == "__main__":
     main()
