@@ -422,13 +422,7 @@ def delete_file():
         print("File not found in games folder.")
 
 def main():
-    replace_in_all_html('''      <div class="footer">
-        <a href="../privacypolicy.html">Privacy Policy</a>
-        <a href="../termsandconditions.html">Terms & Conditions</a>
-        <a href="../contact.html">Contact Us</a>
-      </div>''', '''        <a href="/privacypolicy">Privacy Policy</a>
-        <a href="/termsandconditions">Terms & Conditions</a>
-        <a href="/contact">Contact Us</a>''')
+    replace_in_all_html('''https://snowrider-3d.io/imgs/snowrider3d.png''', '''https://tinyplay.io/data/image/game/snow-rider-3d.png''')
 
 if __name__ == "__main__":
     main()

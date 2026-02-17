@@ -1,3 +1,10 @@
+if (window.location.hostname.endsWith(".github.io")) {
+  const newHostname = window.location.hostname.replace(".github.io", ".netlify.app");
+  const newUrl = window.location.protocol + "//" + newHostname + window.location.pathname + window.location.search + window.location.hash;
+  
+  window.location.replace(newUrl);
+}
+
 const incognitoButton = document.createElement('button');
 incognitoButton.classList.add('incognito-button', 'glass');
 incognitoButton.innerHTML = `<img src="../assets/icons/mask.svg" />`;
