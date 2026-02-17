@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../assets/favicon.png">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
+  <script src="../scripts/homeinject.js" defer></script>
+  <script src="../scripts/injectgames.js" defer></script>
+  <script src="../scripts/script.js" defer></script>
+  <script src="../scripts/game-analytics.js" defer></script>
+  <script defer>
+      // Example: Run on page load
+      window.addEventListener("DOMContentLoaded", async () => {
+      rowData = await fetchRow("Sheet1", getIdByName("Suika Watermelon Game") + 1); // fetch row 2 of "Sheet1"
+      document.getElementById("stats").innerHTML = `${rowData[0] + 1} Views<br>${rowData[1] === "" ? "0" : rowData[1]} Likes`
+
+      // Example: increment cell A2
+      await incrementCell("Sheet1", "A" + String(getIdByName(document.getElementsByClassName("gamebar")[0].firstChild.innerHTML) + 1));
+      });
+  </script>
+  <meta name="description" content="Explore unblocked games Suika Watermelon Game 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Suika Watermelon Game Unblocked - Unblocked Games 64">
+  <meta property="og:description" content="Explore unblocked games Suika Watermelon Game 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!">
+  <meta property="og:image" content="../assets/logo.png">
+  <meta property="og:url" content="https://unblockedgames64.netlify.io/games/suika-watermelon-game.html">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Suika Watermelon Game Unblocked - Unblocked Games 64</title>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Suika Watermelon Game",
+    "url": "https://unblockedgames64.netlify.io/games/suika-watermelon-game.html",
+    "image": "/assets/banners/suika-watermelon-game.png",
+    "description": "Explore unblocked games Suika Watermelon Game 64/6x/g plus, ideal for school or work. Enjoy easy access and a beautiful interface for endless fun anywhere!",
+    "genre": "Casual",
+    "operatingSystem": "Web browser",
+    "applicationCategory": "Game"
+  }
+  </script>
+</head>
+
+<body>
+  <div class="header glass">
+    <img src="../assets/logo.png" alt="Unblocked Games 64 Logo" class="logo">
+    <div class="header-links">
+      <a class="homelink" href="../index.html">Home</a>
+      <a href="../games.html">Games</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+
+  <div class="website-body">    
+    <div id="games-sidebar" class="sidebar glass">            <input oninput="loadGames(this.value)" placeholder="Search for a game..." class="searchinput">
+            <div id="searchresults">
+                <a href="/games/minecraft"><img src="https://cdn2.steamgriddb.com/icon/bf6423635e56a99e9df17852c6bfadca/32/512x512.png"> Minecraft</a>
+                <a href="/games/cookie-clicker"><img src="https://play-lh.googleusercontent.com/Z1MOuuiD05ZN5LkVmMEvKF0mqAc-FknaQ2j8s4dZiO-LSPQX4EEA3RVJdlQEtxe96ok"> Cookie Clicker</a>
+                <a href="/games/geometry-dash"><img src="https://cdn2.steamgriddb.com/icon_thumb/31073475fc4fe0f27c6b876472f0888e.png"> Geometry Dash</a>
+                <a href="/games/slope"><img src="https://play-lh.googleusercontent.com/uJn2i9h7KxYQarC_c3K4qH6o7gLtflFnhD_dN14MNkzHJ1NeNFzCL69jpB5mT0vCoQs"> Slope</a>
+                <a href="/games/super-mario-64"><img src="https://cdn2.steamgriddb.com/icon_thumb/f2201f5191c4e92cc5af043eebfd0946.png"> Super Mario 64</a>
+                <a href="/games/chess"><img src="https://img.icons8.com/?size=512&amp;id=C5LTcmsc3cr0&amp;format=png"> Chess</a>
+                <a href="/games/2048"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/2048_Icon.png"> 2048</a>
+                <a href="/games/blackjack"><img src="https://www.shutterstock.com/image-vector/blackjack-hand-spades-black-jack-600nw-2122961363.jpg"> Blackjack</a>
+                <a href="/games/snow-rider-3d"><img src="https://tinyplay.io/data/image/game/snow-rider-3d.png"> Snow Rider 3D</a>
+                <a href="/games/run-3"><img src="https://cdn2.steamgriddb.com/icon_thumb/833cc7b10966fa0202801496bffccb37.png"> Run 3</a>
+                <a href="/games/basketball-stars"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxKMfiklMLmio5eJsDFtmN0QYrbSjEfp3EQg&amp;s"> Basketball Stars</a>
+                <a href="/games/five-nights-at-freddys"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVIU3tE9qUPnGICYK5mM1ykVsUt43VVIndUQ&amp;s"> Five Nights At Freddy's</a>
+                <a href="/games/tetris"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyD4tAXKhU2oPSZJNWjaUTjkjL7BioAh-I1A&amp;s"> Tetris</a>
+                <a href="/games/block-blast"><img src="https://play-lh.googleusercontent.com/oCQy_qq3Tl5GHW4kI9unYYaxVv8Ly8cVAcMS4lboRLV047uPh2aW_FtXcY5AGRMxAw=w240-h480-rw"> Block Blast</a>
+                <a href="/games/retro-bowl"><img src="https://play-lh.googleusercontent.com/WRM5Y1xZmzcCP1YtO5zl6G2g7CU5c5ZfjX4UVrgi1bpNgkfy-wuB-bQx3kkeRfaGYQ"> Retro Bowl</a>
+                <a href="/games/snake"><img src="https://play-lh.googleusercontent.com/TRA73lTIzi73huCkSF58FFUk_RM4C2Zu5ZOJuLM6BotUGZ4qOEXQigCUjCDpTRQMWW8I=w240-h480-rw"> Snake</a>
+                <a href="/games/a-dance-of-fire-and-ice"><img src="https://cdn2.steamgriddb.com/icon/1f034ade6c58fc442a66e4b2b71abbf8/32/256x256.png"> A Dance of Fire And Ice</a>
+                <a href="/games/flying-car-simulator"><img src="https://play-lh.googleusercontent.com/aJxK96ALe9MHq0y9Asp0ZqKNZ0nxp-bvqG6JZ-9D30MLfc77Wn5TasQiySAA3NoWdSnM=w240-h480-rw"> Flying Car Simulator</a>
+                <a href="/games/getting-over-it"><img src="https://cdn.now.gg/apps-content/com.nowgg.h5.pub501.app51293/game-tiles/getting-over-it.jpg"> Getting Over It</a>
+                <a href="/games/balatro"><img src="/assets/game-icons/balatro.png"> Balatro</a>
+            
+ <!-- ts is harmless text -->
+                 <a href="/games/drive-mad"><img src="/assets/game-icons/drive-mad.png"> Drive Mad</a></div></div>
+
+    <div class="content">
+      <!-- Game Banner -->
+      <div class="game-banner">
+        <img src="/assets/banners/suika-watermelon-game.png" alt="Suika Watermelon Game banner">
+        <h1 class="game-header">Suika Watermelon Game Unblocked</h1>
+      </div>
+
+      <p style="font-style: italic; margin: 10px; width: 95%;">Suika Watermelon Game is free to play! Today, anytime, anywhere.</p>
+
+      <!-- Game Embed -->
+      <div class="game">
+        <div class="iframe">
+          <iframe id="game-iframe" src="\games-src\suika-game-main\suika-watermelon-game.html"></iframe>
+          <div class="gamebar glass"><div>Suika Watermelon Game</div>
+            <div id="stats"></div>
+            <img onclick="likeGame();" id="like-btn" src="../assets/icons/heart_plus.svg" alt="Like this game">
+            <img onclick="openFullscreen();" id="fullscreen-btn" src="../assets/icons/fullscreen.svg" alt="Play fullscreen">
+          </div>
+        </div>
+      </div>
+
+      <div class="game-description glass">
+        <h1>🍉 Suika Watermelon Game Unblocked – Play Online Free</h1>
+
+<p><strong>Suika Watermelon Game Unblocked</strong> is the viral fruit-merging puzzle game where you drop and combine matching fruits to create bigger ones—ultimately aiming to form a giant watermelon. Simple physics-based gameplay and satisfying combos make this one of the most addictive puzzle games online.</p>
+
+<h2>🎮 How to Play</h2>
+<ul>
+  <li>Drop fruits into the container one at a time.</li>
+  <li>Merge two identical fruits to create a larger fruit.</li>
+  <li>Plan your placements carefully to avoid overflowing the box.</li>
+  <li>Keep merging until you create the ultimate watermelon!</li>
+</ul>
+
+<h2>⭐ Features</h2>
+<ul>
+  <li>Fun and relaxing physics-based puzzle gameplay.</li>
+  <li>Satisfying fruit-merging mechanics with combo potential.</li>
+  <li>Simple controls that are easy to learn.</li>
+  <li>100% free and school-safe with this unblocked version.</li>
+</ul>
+
+<h2>🚀 Why Play Suika Watermelon Game Unblocked?</h2>
+<p>The Suika Watermelon Game became a global hit thanks to its easy-to-play mechanics and challenging strategy. With this <strong>unblocked version</strong>, you can enjoy the viral fruit game at school, work, or home without restrictions. Test your planning skills, stack fruits efficiently, and aim for the biggest watermelon possible!</p>
+
+<p><strong>👉 Play Suika Watermelon Game Unblocked now and start merging your way to victory!</strong></p>
+
+        <h2>🖼 Screenshots</h2>
+        <img src="/assets/screenshots/suika-watermelon-game1.png" alt="Suika Watermelon Game Level 1">
+        <img src="/assets/screenshots/suika-watermelon-game2.png" alt="Suika Watermelon Game advanced level">
+
+        <h2>▶ Beginner Tutorial Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/A-RVbDXnzuA?si=-9NcFKjIEUu1YE2-" title="Suika Watermelon Game Gameplay" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <!-- Suggested Games -->
+      <div class="game-suggest glass">
+        Suggested for you
+        <div id="suggested" class="game-suggest-carousel"></div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <a href="../privacypolicy.html">Privacy Policy</a>
+        <a href="../termsandconditions.html">Terms & Conditions</a>
+        <a href="../contact.html">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cool-background"></div>
+</body>
+</html>
