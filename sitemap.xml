@@ -2,33 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Root pages -->
-  <url><loc>https://unblockedgames64.github.io</loc></url>
-  <url><loc>https://unblockedgames64.github.io/about</loc></url>
-  <url><loc>https://unblockedgames64.github.io/contact</loc></url>
-  <url><loc>https://unblockedgames64.github.io/games</loc></url>
-  <url><loc>https://unblockedgames64.github.io/privacypolicy</loc></url>
-  <url><loc>https://unblockedgames64.github.io/termsandconditions</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/about</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/contact</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/games</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/privacypolicy</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/termsandconditions</loc></url>
 
   <!-- Game pages -->
-  <url><loc>https://unblockedgames64.github.io/games/minecraft</loc></url>
-  <url><loc>https://unblockedgames64.github.io/games/cookie-clicker</loc></url>
-  <url><loc>https://unblockedgames64.github.io/games/geometry-dash</loc></url>
-  <url><loc>https://unblockedgames64.github.io/games/slope</loc></url>
-  <url><loc>https://unblockedgames64.github.io/games/super-mario-64</loc></url>
-  <url><loc>https://unblockedgames64.github.io/games/chess</loc></url>
-  <url><loc>https://unblockedgames64.github.io/games/2048</loc></url>
-  <url><loc>https://unblockedgames64.github.io/games/blackjack</loc></url>
-  <url><loc>https://unblockedgames64.github.io/games/snow-rider-3d</loc></url>
-  <url><loc>https://unblockedgames64.github.io/games/run-3</loc></url>
-  <url><loc>https://unblockedgames64.github.io/games/basketball-stars</loc></url>
-  <url><loc>https://unblockedgames64.github.io/games/five-nights-at-freddys</loc></url>
-  <url><loc>https://unblockedgames64.github.io/games/tetris</loc></url>
-  <url><loc>https://unblockedgames64.github.io/games/block-blast</loc></url>
-  <url><loc>https://unblockedgames64.github.io/games/retro-bowl</loc></url>
-  <url><loc>https://unblockedgames64.github.io/games/snake</loc></url>
-  <url><loc>https://unblockedgames64.github.io/games/a-dance-of-fire-and-ice</loc></url>
-  <url><loc>https://unblockedgames64.github.io/games/flying-car-simulator</loc></url>
-  <url><loc>https://unblockedgames64.github.io/games/getting-over-it</loc></url>
-  <url><loc>https://unblockedgames64.github.io/games/balatro</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/games/minecraft</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/games/cookie-clicker</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/games/geometry-dash</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/games/slope</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/games/super-mario-64</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/games/chess</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/games/2048</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/games/blackjack</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/games/snow-rider-3d</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/games/run-3</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/games/basketball-stars</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/games/five-nights-at-freddys</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/games/tetris</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/games/block-blast</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/games/retro-bowl</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/games/snake</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/games/a-dance-of-fire-and-ice</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/games/flying-car-simulator</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/games/getting-over-it</loc></url>
+  <url><loc>https://unblockedgames64.netlify.io/games/balatro</loc></url>
 
 </urlset>
