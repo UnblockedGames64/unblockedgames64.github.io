@@ -1,15 +1,13 @@
 # robots.txt for https://unblockedgames64.github.io/
 
 User-agent: *
-Allow: /
 
 # Disallow GitHub Pages system files (just in case)
+Disallow: /
 Disallow: /assets/
 Disallow: /scripts/
 Disallow: /styles/
 Disallow: /images/
 Disallow: /icons/
 Disallow: /games-src/
-
-# Sitemap location
-Sitemap: https://unblockedgames64.github.io/sitemap.xml
+Disallow: /games/
