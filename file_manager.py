@@ -422,8 +422,7 @@ def delete_file():
         print("File not found in games folder.")
 
 def main():
-    replace_in_all_html('''<a href="/games/drive-mad"><img src="/assets/game-icons/drive-mad.png"> Drive Mad</a>''','''<a href="/games/drive-mad"><img src="/assets/game-icons/drive-mad.png"> Drive Mad</a>
-                 <a href="/games/suika-watermelon-game"><img src="/assets/game-icons/suika-watermelon-game.png"> Suika Watermelon Game</a>''')
+    replace_in_all_html('''.netlify.app''','''.github.io''')
 
 if __name__ == "__main__":
     main()
