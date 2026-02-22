@@ -673,27 +673,6 @@ h2 {
     position: relative;
 }
 
-.gm-link:hover .gm-name {
-    opacity: 0;
-    height: 0;
-}
-
-.gm-link:hover .gm-desc {
-    opacity: 1;
-}
-
-.gm-desc {
-    overflow: hidden;
-    font-size: 12px !important;
-    width: 95%;
-    margin-left: 2.5%;
-    padding: 5px;
-    text-align: center;
-    opacity: 0;
-    transition: 0.5s ease;
-    z-index: 3;
-}
-
 .gm-desc h1 {
     margin: 0;
     font-size: 14px;
@@ -737,4 +716,48 @@ h2 {
     align-items: center;
     font-size: 18px;
     overflow: none;
+}
+
+/* --- New Content Section Styling --- */
+
+/* Center all new text containers and keep them a readable width */
+.about-intro, 
+.gotw-section, 
+.strategy-section, 
+.changelog-section, 
+.faq-section {
+    text-align: center;
+    max-width: 800px; /* Prevents text from stretching across the whole screen */
+    margin: 0 auto 30px auto; /* Centers the block itself */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Force the strategy guides to stack vertically */
+.strategy-section > div {
+    display: flex !important; /* Overrides the inline HTML style */
+    flex-direction: column !important; /* This creates the stacked effect */
+    gap: 25px;
+    width: 100%;
+    align-items: center;
+}
+
+/* Control the width of the individual stacked guides */
+.strategy-section > div > div {
+    width: 100%;
+    max-width: 500px; 
+    background: rgba(255, 255, 255, 0.05); /* Optional: adds a faint box around them */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Keep bullet points readable */
+/* This centers the list block itself, but keeps the text inside left-aligned */
+.strategy-section ul, 
+.changelog-section ul {
+    text-align: left;
+    display: inline-block;
+    margin-top: 15px;
+    padding-left: 20px;
 }

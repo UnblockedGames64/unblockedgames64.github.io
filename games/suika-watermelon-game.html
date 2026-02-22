@@ -49,6 +49,14 @@
   }
   </script>
 </head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYJ5H21PCG"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VYJ5H21PCG');
+    </script>
 
 <body>
   <div class="header glass">
@@ -100,7 +108,7 @@
       <!-- Game Embed -->
       <div class="game">
         <div class="iframe">
-          <iframe id="game-iframe" src="\games-src\suika-game-main\suika-watermelon-game.html"></iframe>
+          <iframe id="game-iframe" src="\games-src\suika-game-main\suika-watermelon-game.html"sandbox="allow-scripts allow-same-origin"></iframe>
           <div class="gamebar glass"><div>Suika Watermelon Game</div>
             <div id="stats"></div>
             <img onclick="likeGame();" id="like-btn" src="../assets/icons/heart_plus.svg" alt="Like this game">
@@ -140,7 +148,7 @@
         <img src="/assets/screenshots/suika-watermelon-game2.png" alt="Suika Watermelon Game advanced level">
 
         <h2>▶ Beginner Tutorial Video</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/A-RVbDXnzuA?si=-9NcFKjIEUu1YE2-" title="Suika Watermelon Game Gameplay" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/A-RVbDXnzuA?si=-9NcFKjIEUu1YE2-" title="Suika Watermelon Game Gameplay" frameborder="0" allowfullscreensandbox="allow-scripts allow-same-origin"></iframe>
       </div>
 
       <!-- Suggested Games -->

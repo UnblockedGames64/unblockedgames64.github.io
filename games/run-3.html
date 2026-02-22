@@ -49,6 +49,14 @@
   }
   </script>
 </head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYJ5H21PCG"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VYJ5H21PCG');
+    </script>
 
 <body>
   <div class="header glass">
@@ -100,7 +108,7 @@
       <!-- Game Embed -->
       <div class="game">
         <div class="iframe">
-          <iframe id="game-iframe" src="\games-src\Run3\run-3.html"></iframe>
+          <iframe id="game-iframe" src="\games-src\Run3\run-3.html"sandbox="allow-scripts allow-same-origin"></iframe>
           <div class="gamebar glass"><div>Run 3</div>
             <div id="stats"></div>
             <img onclick="likeGame();" id="like-btn" src="../assets/icons/heart_plus.svg" alt="Like this game">
@@ -176,7 +184,7 @@
         <img src="/assets/screenshots/run-32.png" alt="Run 3 advanced level">
 
         <h2>▶ Beginner Tutorial Video</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/YRGzEr-lkFY?si=OVe77ymC80F3EtLM" title="Run 3 Gameplay" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/YRGzEr-lkFY?si=OVe77ymC80F3EtLM" title="Run 3 Gameplay" frameborder="0" allowfullscreensandbox="allow-scripts allow-same-origin"></iframe>
       </div>
 
       <!-- Suggested Games -->

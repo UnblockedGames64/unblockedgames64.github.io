@@ -422,7 +422,15 @@ def delete_file():
         print("File not found in games folder.")
 
 def main():
-    replace_in_all_html('''.netlify.app''','''.github.io''')
+    replace_in_all_html('''</head>''','''</head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYJ5H21PCG"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VYJ5H21PCG');
+    </script>''')
 
 if __name__ == "__main__":
     main()
