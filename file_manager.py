@@ -35,6 +35,14 @@ def replace_in_all_html(find_text, replace_text, root_dir="."):
         for file in os.listdir(games_folder):
             if file.endswith(".html") and os.path.isfile(os.path.join(games_folder, file)):
                 html_files.append(os.path.join(games_folder, file))
+    
+    games_folder = os.path.join(root_dir, "blog")
+    if os.path.exists(games_folder) and os.path.isdir(games_folder):
+        for file in os.listdir(games_folder):
+            if file.endswith(".html") and os.path.isfile(os.path.join(games_folder, file)):
+                html_files.append(os.path.join(games_folder, file))
+    
+    html_files.append(os.path.join(root_dir, "template.txt"))
 
     # Loop through files and replace text
     for file_path in html_files:
@@ -422,15 +430,11 @@ def delete_file():
         print("File not found in games folder.")
 
 def main():
-    replace_in_all_html('''</head>''','''</head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYJ5H21PCG"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-VYJ5H21PCG');
-    </script>''')
+    replace_in_all_html('''      <!-- Footer -->
+        <a href="/privacypolicy">Privacy Policy</a>
+        <a href="/termsandconditions">Terms & Conditions</a>
+        <a href="/contact">Contact Us</a>''','''        <div class="footer"><a href="/privacypolicy">Privacy Policy</a><a href="/termsandconditions">Terms & Conditions</a><a href="/contact">Contact Us</a></div>
+''')
 
 if __name__ == "__main__":
     main()

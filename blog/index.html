@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/favicon.png">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
+    <script src="/scripts/homeinject.js" defer></script>
+    <script src="/scripts/injectgames.js" defer></script>
+    <script src="/scripts/script.js" defer></script>
+    
+    <meta name="description" content="Read the latest news, strategy guides, and reviews for the best unblocked games. Unblocked Games 64 Blog brings you top tips and gaming history.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Unblocked Games 64 - Official Blog">
+    <meta property="og:description" content="Read the latest news, strategy guides, and reviews for the best unblocked games. Find top tips and gaming history on the Unblocked Games 64 Blog.">
+    <meta property="og:image" content="/assets/logo.png">
+    <meta property="og:url" content="https://unblockedgames64.github.io/blog/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Blog & Guides - Unblocked Games 64</title>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5698886275599668" crossorigin="anonymous"></script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYJ5H21PCG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VYJ5H21PCG');
+    </script>
+
+    <style>
+        /* Blog Specific Styles - You can move these to styles.css later */
+        .blog-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .blog-card {
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+        .blog-meta {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .blog-title {
+            margin: 0 0 10px 0;
+            font-size: 1.3rem;
+            color: #fff; /* Adjust based on your theme */
+        }
+        .blog-snippet {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+        .read-more {
+            font-weight: bold;
+            color: #00ffcc; /* Matches a gaming aesthetic, adjust to your brand */
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+        .seo-text {
+            line-height: 1.6;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header glass">
+        <img src="/assets/logo.png" alt="Unblocked Games 64 Logo" class="logo">
+        <div class="header-links">
+            <a href="/">Home</a>
+            <a href="/games">Games</a>
+            <a class="homelink" href="/blog">Blog</a>
+            <a href="/about">About</a>
+        </div>
+    </div>
+
+    <div class="website-body">
+        <div id="games-sidebar" class="sidebar glass">
+            <input oninput="loadGames(this.value)" placeholder="Search for a game..." class="searchinput">
+            <div id="searchresults">
+                <a href="/games/eagcraft"><img src="https://cdn2.steamgriddb.com/icon/bf6423635e56a99e9df17852c6bfadca/32/512x512.png"> Eagcraft</a>
+                <a href="/games/cookie-clicker"><img src="https://play-lh.googleusercontent.com/Z1MOuuiD05ZN5LkVmMEvKF0mqAc-FknaQ2j8s4dZiO-LSPQX4EEA3RVJdlQEtxe96ok"> Cookie Clicker</a>
+                <a href="/games/geometry-dash"><img src="https://cdn2.steamgriddb.com/icon_thumb/31073475fc4fe0f27c6b876472f0888e.png"> Geometry Dash</a>
+                <a href="/games/slope"><img src="https://play-lh.googleusercontent.com/uJn2i9h7KxYQarC_c3K4qH6o7gLtflFnhD_dN14MNkzHJ1NeNFzCL69jpB5mT0vCoQs"> Slope</a>
+                <a href="/games/super-mario-64"><img src="https://cdn2.steamgriddb.com/icon_thumb/f2201f5191c4e92cc5af043eebfd0946.png"> Super Mario 64</a>
+                <a href="/games/chess"><img src="https://img.icons8.com/?size=512&amp;id=C5LTcmsc3cr0&amp;format=png"> Chess</a>
+                <a href="/games/2048"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/2048_Icon.png"> 2048</a>
+                <a href="/games/blackjack"><img src="https://www.shutterstock.com/image-vector/blackjack-hand-spades-black-jack-600nw-2122961363.jpg"> Blackjack</a>
+                <a href="/games/snow-rider-3d"><img src="https://geometrydashfullversion.io/data/image/game/snow-rider-3d/snow-rider-3d.jpg"> Snow Rider 3D</a>
+                <a href="/games/run-3"><img src="https://cdn2.steamgriddb.com/icon_thumb/833cc7b10966fa0202801496bffccb37.png"> Run 3</a>
+                <a href="/games/basketball-stars"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxKMfiklMLmio5eJsDFtmN0QYrbSjEfp3EQg&amp;s"> Basketball Stars</a>
+                <a href="/games/five-nights-at-freddys"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVIU3tE9qUPnGICYK5mM1ykVsUt43VVIndUQ&amp;s"> Five Nights At Freddy's</a>
+                <a href="/games/tetris"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyD4tAXKhU2oPSZJNWjaUTjkjL7BioAh-I1A&amp;s"> Tetris</a>
+                <a href="/games/block-blast"><img src="https://play-lh.googleusercontent.com/oCQy_qq3Tl5GHW4kI9unYYaxVv8Ly8cVAcMS4lboRLV047uPh2aW_FtXcY5AGRMxAw=w240-h480-rw"> Block Blast</a>
+                <a href="/games/retro-bowl"><img src="https://play-lh.googleusercontent.com/WRM5Y1xZmzcCP1YtO5zl6G2g7CU5c5ZfjX4UVrgi1bpNgkfy-wuB-bQx3kkeRfaGYQ"> Retro Bowl</a>
+                <a href="/games/snake"><img src="https://play-lh.googleusercontent.com/TRA73lTIzi73huCkSF58FFUk_RM4C2Zu5ZOJuLM6BotUGZ4qOEXQigCUjCDpTRQMWW8I=w240-h480-rw"> Snake</a>
+                <a href="/games/a-dance-of-fire-and-ice"><img src="https://cdn2.steamgriddb.com/icon/1f034ade6c58fc442a66e4b2b71abbf8/32/256x256.png"> A Dance of Fire And Ice</a>
+                <a href="/games/flying-car-simulator"><img src="https://play-lh.googleusercontent.com/aJxK96ALe9MHq0y9Asp0ZqKNZ0nxp-bvqG6JZ-9D30MLfc77Wn5TasQiySAA3NoWdSnM=w240-h480-rw"> Flying Car Simulator</a>
+                <a href="/games/getting-over-it"><img src="https://cdn.now.gg/apps-content/com.nowgg.h5.pub501.app51293/game-tiles/getting-over-it.jpg"> Getting Over It</a>
+                <a href="/games/balatro"><img src="/assets/game-icons/balatro.png"> Balatro</a>
+            
+ <!-- ts is harmless text -->
+                 <a href="/games/drive-mad"><img src="/assets/game-icons/drive-mad.png"> Drive Mad</a>
+                                  <a href="/games/suika-watermelon-game"><img src="/assets/game-icons/suika-watermelon-game.png"> Suika Watermelon Game</a>
+                 <a href="/games/moto-x3m"><img src="/assets/game-icons/moto-x3m.png"> Moto X3M</a></div></div>
+
+        <div class="content">
+            <div class="blog-header">
+                <h1>The <span class="rainbow">Unblocked</span> Gaming Blog</h1>
+                <p style="font-style: italic;">Tips, tricks, updates, and deep dives into your favorite browser games.</p>
+            </div>
+
+            <section class="seo-text glass">
+                <h2>Welcome to the Unblocked Games 64 Community</h2>
+                <p>Looking to improve your high score, discover hidden mechanics, or just find a new favorite game to play during your downtime? You're in the right place. Our blog is dedicated to bringing you the most up-to-date strategies, game reviews, and HTML5 gaming news. From mastering the physics of <strong>Drive Mad</strong> to breaking world records in <strong>Slope</strong>, our expert guides are written for gamers, by gamers.</p>
+            </section>
+
+            <div class="blog-preview-container">
+    
+    <a href="/blog/slope-game-guide/" class="blog-card glass">
+        <img src="https://play-lh.googleusercontent.com/uJn2i9h7KxYQarC_c3K4qH6o7gLtflFnhD_dN14MNkzHJ1NeNFzCL69jpB5mT0vCoQs" alt="Slope Game">
+        <div class="blog-card-content">
+            <h3>Mastering the Velocity in Slope</h3>
+            <p>Learn the physics and reflex tricks to climb the global leaderboard in this high-speed 3D racer.</p>
+            <span class="read-more">Read More ➔</span>
+        </div>
+    </a>
+
+    <a href="/blog/2048-strategy-and-tips/" class="blog-card glass">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/2048_Icon.png" alt="2048">
+        <div class="blog-card-content">
+            <h3>The Ultimate 2048 Math Guide</h3>
+            <p>Stop filling your board! Learn the "Corner Strategy" that top players use to reach the 2048 tile every time.</p>
+            <span class="read-more">Read More ➔</span>
+        </div>
+    </a>
+
+    <a href="/blog/evolution-of-browser-games/" class="blog-card glass">
+        <img src="https://img.icons8.com/?size=512&id=103310&format=png" alt="Flash to HTML5">
+        <div class="blog-card-content">
+            <h3>From Flash to HTML5</h3>
+            <p>How browser gaming survived the death of Flash and became more powerful than ever with WebGL.</p>
+            <span class="read-more">Read More ➔</span>
+        </div>
+    </a>
+
+    <a href="/blog/retro-bowl-strategy-guide/" class="blog-card glass">
+        <img src="https://play-lh.googleusercontent.com/WRM5Y1xZmzcCP1YtO5zl6G2g7CU5c5ZfjX4UVrgi1bpNgkfy-wuB-bQx3kkeRfaGYQ" alt="Retro Bowl">
+        <div class="blog-card-content">
+            <h3>Retro Bowl: Build a Dynasty</h3>
+            <p>Manage your roster and master the passing game with our comprehensive coaching guide.</p>
+            <span class="read-more">Read More ➔</span>
+        </div>
+    </a>
+
+    <a href="/blog/balatro-poker-roguelike-guide/" class="blog-card glass">
+        <img src="/assets/game-icons/balatro.png" alt="Balatro">
+        <div class="blog-card-content">
+            <h3>Balatro: The Poker Roguelike</h3>
+            <p>Break the game with insane Joker combinations and multipliers in this psychedelic card game.</p>
+            <span class="read-more">Read More ➔</span>
+        </div>
+    </a>
+
+    <a href="/blog/geometry-dash-survival-guide/" class="blog-card glass">
+        <img src="https://cdn2.steamgriddb.com/icon_thumb/31073475fc4fe0f27c6b876472f0888e.png" alt="Geometry Dash">
+        <div class="blog-card-content">
+            <h3>Geometry Dash Rhythm Tips</h3>
+            <p>Master the wave and ship forms to conquer even the most difficult unblocked levels.</p>
+            <span class="read-more">Read More ➔</span>
+        </div>
+    </a>
+
+    <a href="/blog/minecraft-unblocked-survival-guide/" class="blog-card glass">
+        <img src="https://cdn2.steamgriddb.com/icon/bf6423635e56a99e9df17852c6bfadca/32/512x512.png" alt="Minecraft">
+        <div class="blog-card-content">
+            <h3>Minecraft Survival Basics</h3>
+            <p>Everything you need to know to survive your first night and start mining for diamonds.</p>
+            <span class="read-more">Read More ➔</span>
+        </div>
+    </a>
+
+    <a href="/blog/cookie-clicker-strategy-guide/" class="blog-card glass">
+        <img src="https://play-lh.googleusercontent.com/Z1MOuuiD05ZN5LkVmMEvKF0mqAc-FknaQ2j8s4dZiO-LSPQX4EEA3RVJdlQEtxe96ok" alt="Cookie Clicker">
+        <div class="blog-card-content">
+            <h3>Cookie Clicker: Baking God</h3>
+            <p>From simple clicks to trillion-cookie empires. Learn when to ascend and trigger the apocalypse.</p>
+            <span class="read-more">Read More ➔</span>
+        </div>
+    </a>
+
+    <a href="/blog/moto-x3m-stunt-guide/" class="blog-card glass">
+        <img src="/assets/game-icons/moto-x3m.png" alt="Moto X3M">
+        <div class="blog-card-content">
+            <h3>Moto X3M: Stunt & Speed</h3>
+            <p>Get 3 stars on every level by mastering flip physics and perfect landing techniques.</p>
+            <span class="read-more">Read More ➔</span>
+        </div>
+    </a>
+
+    <a href="/blog/why-unblocked-games-are-popular/" class="blog-card glass">
+        <img src="https://img.icons8.com/?size=512&id=103305&format=png" alt="Unblocked Phenomenon">
+        <div class="blog-card-content">
+            <h3>The Unblocked Phenomenon</h3>
+            <p>Why browser-based gaming is more popular today than it was in the golden age of the web.</p>
+            <span class="read-more">Read More ➔</span>
+        </div>
+    </a>
+
+</div>
+
+            <p style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px;">Check back regularly! We add new game guides, reviews, and community spotlights every week to keep your unblocked gaming experience fresh.</p>
+
+            <div class="footer">
+                <a href="/privacypolicy">Privacy Policy</a>
+                <a href="/termsandconditions">Terms & Conditions</a>
+                <a href="/contact">Contact Us</a>
+            </div>        
+        </div>
+    </div>
+
+    <div class="cool-background"></div>
+</body>
+</html>
