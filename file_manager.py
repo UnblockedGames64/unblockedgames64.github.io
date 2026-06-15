@@ -430,11 +430,13 @@ def delete_file():
         print("File not found in games folder.")
 
 def main():
-    replace_in_all_html('''      <!-- Footer -->
-        <a href="/privacypolicy">Privacy Policy</a>
-        <a href="/termsandconditions">Terms & Conditions</a>
-        <a href="/contact">Contact Us</a>''','''        <div class="footer"><a href="/privacypolicy">Privacy Policy</a><a href="/termsandconditions">Terms & Conditions</a><a href="/contact">Contact Us</a></div>
-''')
+    replace_in_all_html('''    "applicationCategory": "Game"
+  }
+  </script>''','''    "applicationCategory": "Game"
+  }
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5698886275599668"
+     crossorigin="anonymous"></script>''')
 
 if __name__ == "__main__":
     main()
