@@ -408,6 +408,8 @@ h2 {
 }
 
 .vertical {
+    display: flex;
+    align-items: center;
     min-width: 140px;
     max-height: 100%;
 }
