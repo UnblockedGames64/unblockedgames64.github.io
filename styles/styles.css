@@ -619,11 +619,11 @@ h2 {
 }
 
 .v2 {
-    display: none;
+    opacity: 0;
 }
 
 .fullscreen .v2 {
-    display: block !important;
+    opacity: 1 !important;
     top: 50vh;
 }
 
