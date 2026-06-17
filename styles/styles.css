@@ -408,15 +408,20 @@ h2 {
 }
 
 .vertical {
-    min-width: 120px;
+    min-width: 140px;
     max-height: 100%;
+}
+
+.fill {
+    width: 95%;
+    margin: 2.5%;
 }
 
 #game-iframe {
     border-radius: 8px;
     margin-right: 15px;
     margin-left: 15px;
-    width: calc(100% - 135px);
+    width: calc(100% - 155px);
     aspect-ratio: 16 / 9 !important;
 }
 
@@ -593,7 +598,7 @@ h2 {
 }
 
 .fullscreen #game-iframe {
-    width: calc(100vw - 120px);
+    width: calc(100vw - 140px);
     border-radius: 0;
     border: 0;
     margin: 0;
@@ -608,7 +613,7 @@ h2 {
     position: fixed;
     right: 0;
     top: 0;
-    max-height: 50vh;
+    min-height: 50vh;
     margin: 0;
     background-color: black;
 }
@@ -627,9 +632,9 @@ h2 {
     left: 0;
     bottom: 0;
     margin: 0;
-    width: calc(100vw - 120px);
+    width: calc(100vw - 140px);
     border-radius: 0;
-    height: calc(100vh - (((100vw - 120px) * 9) / 16));
+    height: calc(100vh - (((100vw - 140px) * 9) / 16));
     font-size: 22px;
     background-color: #111;
     z-index: 99;
