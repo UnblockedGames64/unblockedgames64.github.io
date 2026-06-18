@@ -430,13 +430,18 @@ def delete_file():
         print("File not found in games folder.")
 
 def main():
-    replace_in_all_html('''    "applicationCategory": "Game"
-  }
-  </script>''','''    "applicationCategory": "Game"
-  }
-  </script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5698886275599668"
-     crossorigin="anonymous"></script>''')
+    replace_in_all_html('''<img src="/assets/game-icons/moto-x3m.png"> Moto X3M</a>''','''<img src="/assets/game-icons/moto-x3m.png"> Moto X3M</a><div class="ad fill"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5698886275599668"
+     crossorigin="anonymous"></script>
+<!-- sigma vertical -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5698886275599668"
+     data-ad-slot="2405088247"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>''')
 
 if __name__ == "__main__":
     main()
