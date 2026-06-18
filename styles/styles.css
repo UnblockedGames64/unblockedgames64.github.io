@@ -388,7 +388,7 @@ h2 {
 }
 
 .ad {
-    background-color: black;
+    background-color: transparent;
 }
 
 .horizontal {
@@ -597,6 +597,10 @@ h2 {
 
 #like-btn {
     right: 50px;
+}
+
+.fullscreen #like-btn {
+    right: calc((100vh - (((100vw - 140px) * 9) / 16)) * 0.83);
 }
 
 .fullscreen #game-iframe {
